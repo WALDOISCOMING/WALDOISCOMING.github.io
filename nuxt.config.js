@@ -31,7 +31,7 @@ export default {
     ],
 
     router: {
-        base: '/',
+        base: '/nuxt_blog/',
         linkExactActiveClass: 'active-link',
     },
     /*
