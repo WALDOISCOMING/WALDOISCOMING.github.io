@@ -1,1 +1,1 @@
-# WALDOISCOMING.github.io
+# nuxt_blog
