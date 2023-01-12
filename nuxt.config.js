@@ -33,7 +33,6 @@ export default {
     ],
 
     router: {
-        base: '/WALDOISCOMING.github.io/',
         linkExactActiveClass: 'active-link',
     },
     /*
