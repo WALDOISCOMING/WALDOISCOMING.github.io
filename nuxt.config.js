@@ -1,6 +1,6 @@
 export default {
     ssr: true,
-    
+
     target : 'static',
 
     generate: {
@@ -31,7 +31,7 @@ export default {
     ],
 
     router: {
-        base: '/nuxt_blog/',
+        base: '',
         linkExactActiveClass: 'active-link',
     },
     /*
@@ -46,7 +46,7 @@ export default {
         '~/plugins/silentbox.js',
         { src: '~/plugins/vue-masonry', ssr: false }
     ],
-  
+
     /*
     ** Nuxt.js modules
     */
@@ -61,7 +61,7 @@ export default {
         ]
     },
     buildModules: [
-        
+
        '@nuxt/postcss8',
     ],
     /*
