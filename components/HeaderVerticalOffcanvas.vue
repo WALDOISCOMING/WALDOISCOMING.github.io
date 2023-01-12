@@ -5,7 +5,7 @@
                 <div class="header-top">
                     <div class="branding">
                         <n-link to="">
-                            <img src="/img/logo/simple-dark-logo.png" alt="brand logo">
+                            <img src="/img/logo/simple-logo.png" alt="logo">
                         </n-link>
                     </div>
                     <!-- Start MEnu -->
@@ -46,6 +46,6 @@
 
 <script>
     export default {
-            
+
     };
 </script>

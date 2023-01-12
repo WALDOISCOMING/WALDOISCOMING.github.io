@@ -6,7 +6,7 @@
                     <div class="branding">
                         <div class="logo">
                             <n-link to="/">
-                                <img src="/img/logo/simple-light-logo.png" alt="brook logo">
+                                <img src="/img/logo/simple-logo.png" alt="logo">
                             </n-link>
                         </div>
                     </div>
@@ -27,11 +27,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="header-right-wrapper d-none d-sm-block">
                     <div class="header-text text-right">
-                        <h5 class="heading heading-h5 font-20 text-white"> 
-                            <span class="fa fa-heart"></span> 
+                        <h5 class="heading heading-h5 font-20 text-white">
+                            <span class="fa fa-heart"></span>
                             Hello, we are brook studio
                         </h5>
                     </div>
