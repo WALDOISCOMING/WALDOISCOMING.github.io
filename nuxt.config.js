@@ -3,7 +3,7 @@ export default {
 
     target : 'static',
     static: {
-        prefix: true
+        prefix: false
     },
     generate: {
         fallback: true
@@ -33,7 +33,7 @@ export default {
     ],
 
     router: {
-        base: '/nuxt_blog/',
+        base: '/WALDOISCOMING.github.io/',
         linkExactActiveClass: 'active-link',
     },
     /*
@@ -70,7 +70,6 @@ export default {
     ** Build configuration
     */
     build: {
-        publicPath: 'https://waldoiscoming.github.io/',
         extractCSS: true,
         transpile: [/^vue2-google-maps($|\/)/]
     },

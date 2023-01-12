@@ -1,8 +1,8 @@
 {
-    "name": "brook",
+    "name": "nuxtblog",
     "version": "1.0.0",
-    "description": "Creative Multipurpose Vue Nuxt JS Template",
-    "author": "uzzal",
+    "description": "Git nuxt blog",
+    "author": "kkw",
     "private": true,
     "scripts": {
         "dev": "nuxt",
