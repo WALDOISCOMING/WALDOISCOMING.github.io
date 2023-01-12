@@ -13,8 +13,8 @@ export default {
     ** Headers of the page
     */
     head: {
-        title: 'WALDOISCOMING 기술 블로그',
-        titleTemplate: 'WALDOISCOMING 기술 블로그 || %s',
+        title: 'WALDOISCOMING IT 기술 블로그',
+        titleTemplate: 'WALDOISCOMING IT 기술 블로그 || %s',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -45,6 +45,7 @@ export default {
         '~/plugins/vue-masonry-css.js',
         '~/plugins/Mixitup.client.js',
         '~/plugins/silentbox.js',
+        { src: '~/plugins/vue2-codemirror.js', ssr: false },
         { src: '~/plugins/vue-masonry', ssr: false }
     ],
 
