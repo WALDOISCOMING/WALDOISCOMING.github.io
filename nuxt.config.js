@@ -31,7 +31,7 @@ export default {
     ],
 
     router: {
-        base: '',
+        base: '//',
         linkExactActiveClass: 'active-link',
     },
     /*
