@@ -1,0 +1,196 @@
+{
+  "sectionSubTitle": "LATEST NEWS",
+  "sectionTitle": "From our blogs",
+  "data": [
+      {
+          "id": 1,
+          "title": "web 기초",
+          "slug": "web",
+          "image": "/img/index/web.png",
+          "alt": "web서버 기초 개념",
+          "component": "web-development/Web",
+          "categories": ["web-development", "web"],
+          "tags": ["web-development", "web"]
+      },
+      {
+        "id": 2,
+        "title": "HTTP 기초",
+        "slug": "http",
+        "image": "/img/index/web.png",
+        "alt": "HTTP 기초",
+        "categories": ["web-development","web","http"],
+        "tags": ["web-development","web","http"]
+    },
+    {
+        "id": 3,
+        "title": "HTTP Cors",
+        "slug": "http-cors",
+        "image": "/img/index/web.png",
+        "alt": "HTTP Cors",
+        "categories": ["web-development","web","http","http-cors","cors"],
+        "tags": ["web-development","web","http","http-cors","cors"]
+    },
+    {
+        "id": 4,
+        "title": "SSR과 CSR, SPA",
+        "slug": "ssr-csr",
+        "image": "/img/index/web.png",
+        "alt": "SSR과 CSR, SPA",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 5,
+        "title": "Dom 이란",
+        "slug": "dom",
+        "image": "/img/index/web.png",
+        "alt": "html Dom 이란",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 6,
+        "title": "javascript 기초 개념",
+        "slug": "javascript",
+        "image": "/img/index/web.png",
+        "alt": "web서버와 was 개념",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 7,
+        "title": "javascript ECMA SCript(ES)",
+        "slug": "javascript-es",
+        "image": "/img/index/web.png",
+        "alt": "web서버와 was 개념",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 8,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 9,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 10,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 11,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 12,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 13,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 14,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 15,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 16,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 17,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 18,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 19,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 20,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    },
+    {
+        "id": 21,
+        "title": "vuejs 기초 개념",
+        "slug": "vuejs",
+        "image": "/img/index/web.png",
+        "alt": "polyfills",
+        "categories": ["web-development"],
+        "tags": ["web-development"]
+    }
+]
+}

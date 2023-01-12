@@ -1,0 +1,22 @@
+{
+  "data": [
+      {
+          "id": 1,
+          "title": "web 개발",
+          "url": "/web-development",
+          "image": "/img/index/web.png",
+          "alt": "Web 개발",
+          "categories": ["web-development"],
+          "tags": ["web-development"]
+      },
+      {
+          "id": 2,
+          "title": "Android",
+          "url": "/android",
+          "image": "/img/index/android.png",
+          "alt": "Web 개발",
+          "categories": ["android", "java"],
+          "tags": ["android", "java"]
+      }
+  ]
+}

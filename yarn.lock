@@ -2574,6 +2574,11 @@
     "chalk" "^2.4.1"
     "q" "^1.1.2"
 
+"codemirror@^5.41.0":
+  "integrity" "sha512-Gp62g2eKSCHYt10axmGhKq3WoJSvVpvhXmowNq7pZdRVowwtvBR/hi2LSP5srtctKkRT33T6/n8Kv1UGp7JW4A=="
+  "resolved" "https://registry.npmjs.org/codemirror/-/codemirror-5.65.11.tgz"
+  "version" "5.65.11"
+
 "collection-visit@^1.0.0":
   "integrity" "sha512-lNkKvzEeMBBjUGHZ+q6z9pSJla0KWAQPvtzhEV9+iGyQYG+pBpl7xKDhxoNSOZH2hhv0v5k0y2yAM4o4SjoSkw=="
   "resolved" "https://registry.npmjs.org/collection-visit/-/collection-visit-1.0.0.tgz"
@@ -3221,6 +3226,11 @@
   "integrity" "sha512-I2TiqT5iWBEyB8GRfTDP0hiLZ0YeDJZ+upDxjBfOC2lebO5LezQMv7QvIUTzdb64jQyAKLf1AHADtGN+jw6v8Q=="
   "resolved" "https://registry.npmjs.org/devalue/-/devalue-2.0.1.tgz"
   "version" "2.0.1"
+
+"diff-match-patch@^1.0.0":
+  "integrity" "sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw=="
+  "resolved" "https://registry.npmjs.org/diff-match-patch/-/diff-match-patch-1.0.5.tgz"
+  "version" "1.0.5"
 
 "diffie-hellman@^5.0.0":
   "integrity" "sha512-kqag/Nl+f3GwyK25fhUMYj81BUOrZ9IuJsjIcDE5icNM9FJHAVm3VcUDxdLPoQtTuUylWm6ZIknYJwwaPxsUzg=="
@@ -8291,6 +8301,14 @@
   "integrity" "sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA=="
   "resolved" "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.1.0.tgz"
   "version" "2.1.0"
+
+"vue-codemirror@^4.0.6":
+  "integrity" "sha512-ilU7Uf0mqBNSSV3KT7FNEeRIxH4s1fmpG4TfHlzvXn0QiQAbkXS9lLfwuZpaBVEnpP5CSE62iGJjoliTuA8poQ=="
+  "resolved" "https://registry.npmjs.org/vue-codemirror/-/vue-codemirror-4.0.6.tgz"
+  "version" "4.0.6"
+  dependencies:
+    "codemirror" "^5.41.0"
+    "diff-match-patch" "^1.0.0"
 
 "vue-fixed-header@^3.2.15":
   "integrity" "sha512-PTse41lPNBSW3Is9gHotNY6djmpnKaKA7yZszuVy5Kd9pe0JucEfmmHl7XBJsHlBYBDuhc07wT33sfAEgr9IHw=="
