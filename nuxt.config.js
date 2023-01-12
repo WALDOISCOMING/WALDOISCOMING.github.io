@@ -2,7 +2,9 @@ export default {
     ssr: true,
 
     target : 'static',
-
+    static: {
+        prefix: true
+    },
     generate: {
         fallback: true
     },
@@ -11,8 +13,8 @@ export default {
     ** Headers of the page
     */
     head: {
-        title: 'Brook',
-        titleTemplate: 'Brook || %s',
+        title: 'WALDOISCOMING 기술 블로그',
+        titleTemplate: 'WALDOISCOMING 기술 블로그 || %s',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -31,6 +33,7 @@ export default {
     ],
 
     router: {
+        base: '/nuxt_blog/',
         linkExactActiveClass: 'active-link',
     },
     /*
@@ -67,6 +70,7 @@ export default {
     ** Build configuration
     */
     build: {
+        publicPath: 'https://waldoiscoming.github.io/',
         extractCSS: true,
         transpile: [/^vue2-google-maps($|\/)/]
     },
