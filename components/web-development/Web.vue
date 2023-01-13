@@ -1,22 +1,28 @@
 <template>
   <div class="content basic-dark2-line-1px pb--50 mb--35">
     <div class="inner">
-      <h5 class="heading heading-h5 line-height-1-95 wow move-up">“서버 개발에서....”</h5>
+      <h5 class="heading heading-h5 line-height-1-95 wow move-up">“웹 서버에 대하여 알아보도록 합시다.”</h5>
         <div class="desc mt--45 mb--50">
-          <p class="bk_pra wow move-up">Web 서버란 클라이언트(사용자)가 웹 브라우저에서 어떠한 페이지 요청을 하면 웹 서버에서 그 요청을 받아 정적 컨텐츠(html,css,js)를 제공..</p>
-          <div>Web Server ex ) apache http, nginx</div>
+          <p>"웹 서버"는 하드웨어, 소프트웨어 혹은 두 개가 같이 동작하는 것을 의미할 수 있습니다.</p>
+          <p>하드웨어 측면에서, 웹 서버는 웹 서버의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images, CSS stylesheets, 그리고 JavaScript files가 있습니다.) 웹 서버는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를 주고받을 수 있도록 합니다.</p>
+          <p>소프트웨어 측면에서, 웹 서버는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 웹 서버는 HTTP서버로 국한합니다. HTTP 서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
+</p>
+          <p>가장 기본적인 단계에서, 브라우저가 웹 서버에서 불려진 파일을 필요로 할때, 브라우저는 HTTP를 통해 파일을 요청합니다. 요청이 올바른 웹 서버(하드웨어)에 도달하였을 때, HTTP 서버(software)는 요청된 문서를 HTTP를 이용해 보내줍니다.</p>
+          <img class="w-100" src="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server/web-server.svg" alt="web server image">
+          <p>정적 웹 서버 혹은 스택은 HTTP 서버 (소프트웨어)가 있는 컴퓨터(하드웨어)로 구성되어 있습니다. 서버가 그 불려진 파일을 당신의 브라우저에게 전송하기 때문에, 저희는 그것을 "정적"이라고 부릅니다.</p>
+          <p>동적 웹 서버는 정적 웹 서버와 추가적인 소프트웨어(대부분 일반적인 애플리케이션 서버와 데이터베이스)로 구성되어 있습니다. 애플리케이션 서버가 HTTP 서버를 통해 당신의 브라우저에게 불려진 파일들을 전송하기 전에, 애플리케이션 서버가 업데이트하기 때문에 우리는 이것을 동적이라고 부릅니다.</p>
+
         </div>
         <div class="desc mt--45 mb--50">
-          <p class="bk_pra wow move-up">WAS(AP)서버는 웹 서버와 웹 컨테이너가 합쳐진 형태로서, 웹 서버 단독으로는 처리할 수 없는 DB 조회나 다양한 로직 처리가 필요한 동적 컨텐츠를 제공..</p>
-          <div>Application Server ex ) apache tomcat,</div>
-        </div>
-        <div class="desc mt--45 mb--50">
-          <p class="bk_pra wow move-up">그럼 순수 WAS로만 서비스 제공 해도 될까?.</p>
-          <div>=> 순수 WAS로 제공하는 것은 가능하지만(JSP 구조)하나의 서버에서 유저에게 static, dynamic 서비스를 모두 제공하면 과부화가 오기 때문에, Web server, WAS Server를 분리하여 서비스를 제공하는 것를 권장한다.</div>
+          <p>WAS(Web Application Server)는 웹 서버와 웹 컨테이너가 합쳐진 형태로서, 웹 서버 단독으로는 처리할 수 없는 DB 조회나 다양한 로직 처리가 필요한 동적 컨텐츠를 제공합니다.</p>
+          <img class="w-100" src="/img/web-development/web-servrice-arch.png" alt="web servrice arch">
+          <p>WAS만으로 서비스를 제공할 수 있지만, 정적 컨텐츠를 웹서버, 동적 컨텐츠는 WAS에게 맞겨 분리하여 서비스를 하는것이 서버의 호율성을 높을 수 있습니다. </p>
         </div>
     </div>
-    <div class="thumbnail">
-      <img class="w-100" src="/img/blog/big-img/standard-post-2.jpg" alt="Blog Image 01">
+    <div class="mt--45 mb--50">
+      <p>참고자료</p>
+      <a href="https://developer.mozilla.org/ko/docs/Learn/Common_questions/What_is_a_web_server">https://developer.mozilla.org/ko/docs/Learn/Common_questions/What_is_a_web_server</a>
+      <a href="https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html">https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html</a>
     </div>
   </div>
 </template>

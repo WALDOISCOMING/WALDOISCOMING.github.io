@@ -36,8 +36,7 @@
                                             <div class="post-tag d-flex align-items-center">
                                                 <h6 class="heading heading-h6">TAGS:</h6>
                                                 <div class="blog-tag-list pl--5">
-                                                    <n-link to="/blog/blog-creative">business</n-link>
-                                                    <n-link to="/blog/blog-creative">format</n-link>
+                                                    <n-link v-for="(tag, i) in data.tags" :key="i" :to="`/blog/tag/${slugify(tag)}`" class="mr-2">{{ tag }}</n-link>
                                                 </div>
                                             </div>
                                         </div>
@@ -49,7 +48,6 @@
                                     </div>
                                 </div>
                             </article>
-                            <!-- Start Post Nav Links -->
                             <div class="post-nav-lisnt mb--45 wow move-up">
                                 <div class="nav-item previous">
                                     <n-link to="/blog/blog-creative">
@@ -71,121 +69,10 @@
                                 </div>
                             </div>
                             <!-- End Post Nav Links -->
-
-                            <div class="comments-wrapper">
-                                <div class="inner">
-                                    <h4 class="heading heading-h4">3 Comments</h4>
-                                    <div class="commnent-list-wrap mt--25">
-
-                                        <!-- Start Single Comment -->
-                                        <div class="comment wow move-up">
-                                            <div class="thumb">
-                                                <img src="/img/blog/client/client-1.jpg" alt="Multipurpose">
-                                            </div>
-                                            <div class="content">
-                                                <h6 class="heading heading-h6">SCOTT JAMES</h6>
-                                                <div class="text mt--10 pr--50 pr_sm--5">
-                                                    <p class="bk_pra">To link your Facebook and Twitter accounts, open the Instagram app on your phone or tablet, and select the Profile tab in the bottom-right corner of the screen.</p>
-                                                </div>
-                                                <div class="comment-footer mt--10">
-                                                    <span>May 17, 2018 at 1:59 am</span>
-                                                    <span class="reply-btn">
-                                                        <button>Reply</button>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Single Comment -->
-
-                                        <!-- Start Single Comment -->
-                                        <div class="comment comment-reply wow move-up">
-                                            <div class="thumb">
-                                                <img src="/img/blog/client/client-2.jpg" alt="Multipurpose">
-                                            </div>
-                                            <div class="content">
-                                                <h6 class="heading heading-h6">OWEN CHRIST</h6>
-                                                <div class="text mt--10 pr--50 pr_sm--5">
-                                                    <p class="bk_pra">To link your Facebook and Twitter accounts, open the Instagram app on your phone or tablet, and select the Profile tab in the bottom-right corner of the screen.</p>
-                                                </div>
-                                                <div class="comment-footer mt--10">
-                                                    <span>May 17, 2018 at 1:59 am</span>
-                                                    <span class="reply-btn">
-                                                        <button>Reply</button>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Single Comment -->
-
-                                        <!-- Start Single Comment -->
-                                        <div class="comment wow move-up">
-                                            <div class="thumb">
-                                                <img src="/img/blog/client/client-3.jpg" alt="Multipurpose">
-                                            </div>
-                                            <div class="content">
-                                                <h6 class="heading heading-h6">EDNA WATSON</h6>
-                                                <div class="text mt--10 pr--50 pr_sm--5">
-                                                    <p class="bk_pra">To link your Facebook and Twitter accounts, open the Instagram app on your phone or tablet, and select the Profile tab in the bottom-right corner of the screen.</p>
-                                                </div>
-                                                <div class="comment-footer mt--10">
-                                                    <span>May 17, 2018 at 1:59 am</span>
-                                                    <span class="reply-btn">
-                                                        <button>Reply</button>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Single Comment -->
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Start Comment Form -->
-                            <div class="comment-form-wrapper">
-                                <div class="header wow move-up">
-                                    <h4 class="heading heading-h4">Leave A Comment</h4>
-                                    <div class="coppent-note mt--20 mb--30">
-                                        <p class="bk_pra">Your email address will not be published. Required fields are marked</p>
-                                    </div>
-                                </div>
-                                <!-- Start Contact Area -->
-                                <div class="contact-form wow move-up">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <input type="text" placeholder="Name *">
-                                            </div>
-
-                                            <div class="col-lg-12 mt--30">
-                                                <input type="text" placeholder="Email *">
-                                            </div>
-
-                                            <div class="col-lg-12 mt--30">
-                                                <input type="text" placeholder="Website">
-                                            </div>
-
-                                            <div class="col-lg-12 mt--30">
-                                                <textarea placeholder="Your Comment"></textarea>
-                                            </div>
-
-                                            <div class="col-lg-12 mt--30">
-                                                <div class="blog-btn">
-                                                    <button class="brook-btn bk-btn-theme btn-sd-size btn-rounded space-between">Post Comment</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- End Contact Area -->
-
-                            </div>
-                            <!-- End Comment Form -->
                         </div>
-                    </div>
-
+                    </div>                    
                     <div class="col-lg-4 mt_md--40 mt_sm--40">
-                        <BlogSidebar />
+                        <!-- <BlogSidebar /> -->
                     </div>
                 </div>
             </div>

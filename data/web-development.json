@@ -16,8 +16,9 @@
         "id": 2,
         "title": "HTTP 기초",
         "slug": "http",
-        "image": "/img/index/web.png",
+        "image": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png",
         "alt": "HTTP 기초",
+        "component": "web-development/Http",
         "categories": ["web-development","web","http"],
         "tags": ["web-development","web","http"]
     },
@@ -25,7 +26,7 @@
         "id": 3,
         "title": "HTTP Cors",
         "slug": "http-cors",
-        "image": "/img/index/web.png",
+        "image": "https://nordicapis.com/wp-content/uploads/What-is-CORS-.png",
         "alt": "HTTP Cors",
         "categories": ["web-development","web","http","http-cors","cors"],
         "tags": ["web-development","web","http","http-cors","cors"]
