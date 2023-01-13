@@ -28,6 +28,7 @@
         "slug": "http-cors",
         "image": "https://nordicapis.com/wp-content/uploads/What-is-CORS-.png",
         "alt": "HTTP Cors",
+        "component": "web-development/HttpCors",
         "categories": ["web-development","web","http","http-cors","cors"],
         "tags": ["web-development","web","http","http-cors","cors"]
     },
@@ -35,8 +36,9 @@
         "id": 4,
         "title": "SSR과 CSR, SPA",
         "slug": "ssr-csr",
-        "image": "/img/index/web.png",
+        "image": "https://www.growth-rocket.com/wp-content/uploads/2020/07/pros-and-cons.jpg",
         "alt": "SSR과 CSR, SPA",
+        "component": "web-development/SSRCSR",
         "categories": ["web-development"],
         "tags": ["web-development"]
     },
