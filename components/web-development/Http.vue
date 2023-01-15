@@ -68,10 +68,105 @@
             <p class="inner-blog-text-30">PATCH 메서드는 리소스의 부분만을 수정하는 데 쓰입니다.</p>
             <p class="inner-blog-text-30">HTTP Methods 중 서비스 정책에 따라 금지(apache 등에서 설정)되는 경우도 존재합니다. 대표적으로 DELETE나 PUT은 보안상의 이유로 금지되는 경우가 있습니다.</p>
         </div>
+
+        <div class="desc mt--45 mb--50">
+          <p>HTTP 1.1과 2.0</p>
+            <img class="w-100" src="/img/web-development/http-diff.png" alt="http_diff">
+            <p class="inner-blog-text-10">HTTP는 request 메서드를 정의하여, 주어진 리소스에 수행하길 원하는 행동을 나타냅니다.</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="pricing-header">
+                    <span class="heading-h4">HTTP 1.1</span>
+                  </th>
+                  <th class="pricing-header">
+                    <span class="heading-h4">HTTP 2.0</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Persistent Connection(Connection 지속 시간 설정)</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Connection	HTTP 메시지 전송 방식의 변화</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Pipelining</span></li>
+                      <li><span>클라이언트에서는 요청을 응답에 상관없이 보내고 Server에서는 응답을 요청이 들어온 순서대로 보내줍니다.</span></li>
+                      <li><span>클라이언트에서는 응답의 순서가 잘못되거 중간에 빠졌다면 누락이 발생한 요청을 다시 보내게 됩니다.</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>요청과 응답의 다중화(멀티플렉스 스트림)</span></li>
+                      <li><span>multiplex streaming(하나의 tcp연결안에 여러 스트림이 존재 가능(스트림은 양방향 데이터 흐름))</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>HTTP의 HOL(Head of Line Blocking)</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>리소스간 우선순위 설정</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Header 중복	Server Push</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Server Push</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Header 압축</span></li>
+                      <li><span>중복헤더의 제거(헤더를 압축하고 중복된거는 이전 스트림에서 가져와 사용)</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>TCP의 HOL(Head of Line Blocking)</span></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
       <a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Overview">https://developer.mozilla.org/ko/docs/Web/HTTP/Overview</a>
+      <a href="https://dkrnfls.tistory.com/289#HTTP%-F---%EA%B-%BC%--HTTP%-F---%EC%-D%--%--%EC%B-%A-%EC%-D%B-%EB%-A%--%-F">https://dkrnfls.tistory.com/289#HTTP%-F---%EA%B-%BC%--HTTP%-F---%EC%-D%--%--%EC%B-%A-%EC%-D%B-%EB%-A%--%-F</a>
     </div>
   </div>
 </template>

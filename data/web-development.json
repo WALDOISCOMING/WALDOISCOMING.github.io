@@ -46,8 +46,9 @@
         "id": 5,
         "title": "Dom 이란",
         "slug": "dom",
-        "image": "/img/index/web.png",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg",
         "alt": "html Dom 이란",
+        "component": "web-development/Dom",
         "categories": ["web-development"],
         "tags": ["web-development"]
     },
