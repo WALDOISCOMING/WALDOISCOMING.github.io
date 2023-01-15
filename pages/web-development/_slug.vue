@@ -18,9 +18,9 @@
                                     <h3 class="heading heading-h3 font-32">{{ data.title }}</h3>
                                     <div class="post-meta mt--20">
                                         <div class="post-date">{{ data.date }}</div>
-                                        <div class="post-category">
+                                        <!-- <div class="post-category">
                                             <n-link v-for="(category, i) in data.categories" :key="i" :to="`/blog/category/${slugify(category)}`" class="mr-2">{{ category }},</n-link>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <!-- Start Thumbnail -->
@@ -48,24 +48,36 @@
                                     </div>
                                 </div>
                             </article>
-                            <div class="post-nav-lisnt mb--45 wow move-up">
-                                <div class="nav-item previous">
-                                    <n-link to="/blog/blog-creative">
+                            <div class="post-nav-lisnt mb--45 wow move-up">                   
+                                <div class="nav-item previous"  v-if="preData">
+                                    <n-link :to="`/web-development/${preData.slug}`">
                                         <div class="link-text">
                                             <span class="fa fa-arrow-left"></span>
                                             <p class="">Prev</p>
                                         </div>
-                                        <span>US Ranks Near Bottom on Development Commitment</span>
+                                        <span>{{preData.title}}</span>
                                     </n-link>
                                 </div>
-                                <div class="nav-item next mt_sm--30">
-                                    <n-link to="/blog/blog-creative">
+                                <div class="nav-item previous" v-else>
+                                    <div class="link-text">
+                                        <span class="fa fa-arrow-left"></span>
+                                        <p class="">Prev</p>
+                                    </div>
+                                </div>
+                                <div class="nav-item next mt_sm--30" v-if="nextData">
+                                    <n-link :to="`/web-development/${nextData.slug}`">
                                         <div class="link-text">
                                             <p class="">Next</p>
                                             <span class="fa fa-arrow-right"></span>
                                         </div>
-                                        <span>Career Tips For Emerging Photographers</span>
+                                        <span>{{nextData.title}}</span>
                                     </n-link>
+                                </div>
+                                <div  class="nav-item next mt_sm--30" v-else>
+                                    <div class="link-text">
+                                        <p class="">Next</p>
+                                        <span class="fa fa-arrow-right"></span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- End Post Nav Links -->
@@ -104,6 +116,8 @@
                 searchOpen: false,
                 slug: this.$route.params.slug,
                 componentInstance: '',
+                preData: '',
+                nextData: '',
             }
         },
 
@@ -111,11 +125,12 @@
             console.log(' this.$route.params.url',  this.$route.params.url)
             console.log(' this.$route.params.slug',  this.$route.params.slug)
             this.data = data.data.find(d => d.slug == this.$route.params.slug);
+            this.preData = data.data.find(d => d.id == (this.data.id -1));
+            this.nextData = data.data.find(d => d.id == (this.data.id + 1));
             console.log('data',this.data)
-    //if (process.browser) {
-      //const component = require(this.data.component);
-      //Vue.use("my-component", component); // or just Vue.use(component);
-    //}
+            console.log('data.data',data.data)
+            console.log('preData ',this.preData)
+            console.log('nextData ',this.nextData)
 
             this.onLoadComponent();
 
