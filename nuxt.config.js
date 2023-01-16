@@ -46,6 +46,7 @@ export default {
         '~/plugins/Mixitup.client.js',
         '~/plugins/silentbox.js',
         { src: '~/plugins/vue2-codemirror.js', ssr: false },
+        { src: '~/plugins/vue2-codemirror-console.js', ssr: false },
         { src: '~/plugins/vue-masonry', ssr: false }
     ],
 

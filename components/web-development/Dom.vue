@@ -160,7 +160,7 @@
 
 <script>
     export default {
-        name: "HttpCors",
+        name: "Dom",
         components: {
         },
         data () {

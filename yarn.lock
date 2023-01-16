@@ -2574,7 +2574,14 @@
     "chalk" "^2.4.1"
     "q" "^1.1.2"
 
-"codemirror@^5.41.0":
+"codemirror-console@^3.0.4":
+  "integrity" "sha512-P8OL0UYuitttcvxm1Bk3Mqyc+VtYnjaUERon5DXR9fC9A2Qq76YFJA7XlSE/9SG9mHZHb+sYF+Wb6Ji8EwJa9Q=="
+  "resolved" "https://registry.npmjs.org/codemirror-console/-/codemirror-console-3.0.4.tgz"
+  "version" "3.0.4"
+  dependencies:
+    "codemirror" "^5.18.2"
+
+"codemirror@^5.18.2", "codemirror@^5.41.0":
   "integrity" "sha512-Gp62g2eKSCHYt10axmGhKq3WoJSvVpvhXmowNq7pZdRVowwtvBR/hi2LSP5srtctKkRT33T6/n8Kv1UGp7JW4A=="
   "resolved" "https://registry.npmjs.org/codemirror/-/codemirror-5.65.11.tgz"
   "version" "5.65.11"

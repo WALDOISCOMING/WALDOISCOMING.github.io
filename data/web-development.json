@@ -56,8 +56,9 @@
         "id": 6,
         "title": "javascript 기초 개념",
         "slug": "javascript",
-        "image": "/img/index/web.png",
+        "image": "/img/index/javascript-logo-svgrepo-com.svg",
         "alt": "web서버와 was 개념",
+        "component": "web-development/JS",
         "categories": ["web-development"],
         "tags": ["web-development"]
     },
@@ -67,6 +68,7 @@
         "slug": "javascript-es",
         "image": "/img/index/web.png",
         "alt": "web서버와 was 개념",
+        "component": "web-development/JSECMA",
         "categories": ["web-development"],
         "tags": ["web-development"]
     },
