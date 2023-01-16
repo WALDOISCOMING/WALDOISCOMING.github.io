@@ -1,27 +1,159 @@
 <template>
   <div class="content basic-dark2-line-1px pb--50 mb--35">
     <div class="inner">
-      <h5 class="heading heading-h5 line-height-1-95 wow move-up">Dom에 대하여 알아보도록 합시다.”</h5>
+      <h5 class="heading heading-h5 line-height-1-95 wow move-up">DOM에 대하여 알아보도록 합시다.”</h5>
         <div class="desc mt--45 mb--50">
-          <p>Dom 개념.</p>
-          <p>HTTP request는 기본적으로 Cross-Site HTTP Requests가 가능. 이는 img, script 등에서 타 도메인 리소스(이미지, 스크립트 등)를 참조 할 수 있습니다.</p>
-          <img class="w-100" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png" alt="cors_principle image">
-          <p>아래는 naver 사이트의 html의 img에서 www.naver.com이 아닌 타 url을 접근 하여 이미지를 가져오고 있습니다.</p>          
-          <img class="w-100" src="/img/web-development/naver-cors.png" alt="naver cors-example image">
-          <p>그러나, 보안상의 이유로 브라우저에서는 script 로 둘러쌓인 내부에서 작성된 cross-origin HTTP를 제한하고 있습니다. 예를 들어 XMLHttpRequest나 Fatch API는 same-origin Policy를 따르기 때문에 올바른 CORS header를 포함하지 않는 한 다른 origin에 request를 할 수 없습니다. 때문에 서버 개발자는 CORS을 이해하고 스펙을 따라 HTTP request에 응답을 해야합니다.</p>
-          <img class="w-100" src="/img/web-development/cors-example.png" alt="cors-example image">
+          <p>DOM 개념.</p>
+          <p class="inner-blog-text-10">DOM (Document Object Model) 은 HTML 또는 XML document와 상호작용하고 표현하는 API(JS와 같은 HTML 요소의 연결 지점)입니다. DOM은 browser에서 로드되며, 노드 트리(각 노드는 document의 부분을 나타냅니다)로 표현하는 document 모델입니다.</p>
+          <p class="inner-blog-text-10">아래는 브라우저의 렌더링 엔진의 기본적인 동작 과정입니다.</p>
+          <img class="w-100" src="https://d2.naver.com/content/images/2015/06/helloworld-59361-2.png" alt="browser rendering image">
+          <p class="inner-blog-text-10">브라우저의 렌더링 엔진은 HTML 문서를 파싱하고 "콘텐츠 트리" 내부에서 태그를 DOM 노드로 변환합니다. 그 다음 외부 CSS 파일과 함께 포함된 스타일 요소도 파싱합니다. 스타일 정보와 HTML 표시 규칙은 "렌더 트리"라고 부르는 또 다른 트리를 생성합니다.</p>
+          <p class="inner-blog-text-10">아래는 웹킷과 모질라 게코에서의 렌더링 엔진의 동작 과정입니다. 두 부분은 구조가 약간 다를지라도, 위의 렌더링 엔진의 동작 과정이 거의 동일합니다.</p>
+          <img class="w-100" src="https://d2.naver.com/content/images/2015/06/helloworld-59361-3.png" alt="webkit browser rendering tree image">
+          <img class="w-100" src="https://d2.naver.com/content/images/2015/06/helloworld-59361-4.png" alt="geako browser rendering tree image">
+          <p class="inner-blog-text-10">위의 내용을 통해 DOM, CSS, JS의 관계에 대하여 간략히 정리하면 </p>
+          <p class="inner-blog-text-30">DOM(실제 HTML 요소), CSS(브라우저가 이 rules를 통해 rendering 방식을 결정), JS(브라우저가 이해하는 프로그래밍 언어, DOM과 CSS를 조작하며 그외 동작도 수행)</p>
+          <p class="inner-blog-text-30">고객이 사이트(url)에 접근한 경우, 브라우저는 서버에 "컨텐츠"를 요청합니다. 서버는 일반적으로 DOM, CSS 및 JavaScript 태그를 포함하는 HTML 페이지를 다시 전송해줍니다.</p>
+          <p class="inner-blog-text-50">1. 브라우저는 컨텐츠 트리를 생성하기 위해 HTML을 읽는 것으로 시작합니다.</p>
+          <p class="inner-blog-text-50">2. 이후 CSS를 CSS 파서를 통해 DOM과 함께 렌더링 트리를 만듭니다.</p>
+          <p class="inner-blog-text-50">3. 각 HTML 요소에 표시할 정확한 물리적 창 좌표가 할당되는 레이아웃 프로세스를 거칩니다.</p>
+          <p class="inner-blog-text-50">4. 마지막으로 모든 것이 "채색"되고 양식화된 HTML 페이지가 표시됩니다.</p>
+          <p class="inner-blog-text-50">5. JavaScript의 script 태그에서 발생하는 대로 브라우저에서 별도로 구문 분석됩니다. JavaScript는 dom의 기존 구성 요소를 추가/삭제/수정하고 CSS가 적용되는 방식을 변경할 수 있습니다. 또한 새로운 네트워크 호출 등 그외의 기능들을 담당해 줍니다.</p>
+          <p class="inner-blog-text-50">이때 4 -> 5 과정에 시간이 오래걸리는 경우 고객에게 화면은 보이지만, 기능이 상호작용 되지 않는 경우가 발생됩니다.</p>
         </div>
         <div class="desc mt--45 mb--50">
-          <p>HTMl JS Dom 관계</p>
+          <p>DOM 기초 사용 법</p>
+          <p class="inner-blog-text-10">DOM data type</p>
+          <p class="inner-blog-text-10">
+            <table class="table">
+            <thead>
+                <tr>
+                  <th class="pricing-header">
+                    <span class="heading-h4">Data type</span>
+                  </th>
+                  <th class="pricing-header">
+                    <span class="heading-h4">설명</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Document</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>root DOM Object 입니다.</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Node</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Document 내에 있는 모든 개체는 일종의 노드입니다. HTML 문서에서 객체는 attribute 노드일 수 있지만 텍스트 노드 또는 속성 노드일 수도 있습니다.</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Element</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>HTML 요소는 Element 노드이며, Attribute 노드를 가질 수 있는 유일한 노드입니다. document.createElement()와 같은 곳에서 신규 Element를 생성시키며 return 합니다.</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>NodeList</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>NodeList는 Element들의 배열 입니다. document.querySelectorAll()와 같은 곳에서 가져와서 사용됩니다.</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Attr</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>Attr는 Element의 특별한 interface 입니다. createAttribute() 등을 통해 사용됩니다.</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>NamedNodeMap</span></li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul>
+                      <li><span>배열과 비슷하지만 이름이나 인덱스로 항목에 액세스합니다. 각 액세스를 위한 이러한 목적을 위한 item() 메서드가 있으며 namedNodeMap에서 항목을 추가하고 제거할 수도 있습니다.</span></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+          <p class="inner-blog-text-10">DOM core interface</p>
+          <p class="inner-blog-text-30">document.querySelector(selector)</p>
+          <p class="inner-blog-text-30">document 안에서 element의 ID<code>document.querySelector("#id");</code>나, CSS selector<code>document.querySelector("div.user-panel:not(.main) input[name='login']");</code>와 동일한 것들 중 document에서 해당 값이 있는 첫 번째 요소가 반환됩니다.</p>
+          <p class="inner-blog-text-30">document.querySelectorAll(name)</p>
+          <p class="inner-blog-text-30">document 안에서 selector 형식과 동일한 <code>document.querySelectorAll("p");</code> element의 리스트를 반환합니다.</p>
+          <p class="inner-blog-text-30">document.createElement(name)</p>
+          <p class="inner-blog-text-30">document 안에서 element를 생성하고, element를 반환합니다.</p>
+          <p class="inner-blog-text-30">parentNode.appendChild(node)</p>
+          <p class="inner-blog-text-30">parentNode에 child로 추가합니다.</p>
+          <p class="inner-blog-text-30">element.innerHTML</p>
+          <p class="inner-blog-text-30">Element안의 HTML 또는 XML 태그를 가져오거나 설정합니다.</p>
+          <p class="inner-blog-text-30">element.style...</p>
+          <p class="inner-blog-text-30">Element안의 style 관련 값을 가져오거나 설정합니다.</p>
+          <p class="inner-blog-text-30">element.setAttribute()</p>
+          <p class="inner-blog-text-30">Element안의 Attribute 값을 추가하거나 업데이트합니다.</p>
+          <p class="inner-blog-text-30">element.getAttribute()</p>
+          <p class="inner-blog-text-30">Element안의 Attribute 값을 가져옵니다.</p>
+          <p class="inner-blog-text-30">element.addEventListener()</p>
+          <p class="inner-blog-text-30">Element안의 이벤트를 추가합니다.</p>
+          <p class="inner-blog-text-30">window.content</p>
+          <p class="inner-blog-text-30">window.onload</p>
+          <p class="inner-blog-text-30">window.scrollTo()</p>
         </div>
-
         <div class="desc mt--45 mb--50">
-          <p>가상 Dom 이란</p>
+          <p>가상 DOM 이란</p>
+          <p class="inner-blog-text-10">DOM 트리가 수정될 때마다 렌더 트리가 계속해서 실시간으로 갱신되어, 노드의 수가 많아질수록 속도가 느려집니다.</p>
+          <p class="inner-blog-text-10"><code>document.getElementById('some-id').innerValue = 'updated value';</code>이와 같은 방식으로 DOM을 업데이트 할 경우</p>
+          <p class="inner-blog-text-10">'some-id' ID를 가진 노드를 찾은 뒤 위에 설명한 렌더링의 1~4 단계를 다시 반복해야 합니다.</p>
+          <p class="inner-blog-text-10">만약 화면에서 N번의 수정이 발생되면 N번의 렌더 트리가 생성되어야 합니다.</p>
+          <p class="inner-blog-text-10">이러한 메모리 낭비를 줄이기 위해 가상 DOM이라는 방식이 생겼습니다.</p>
+          <p class="inner-blog-text-10">DOM 변경 시 가상 DOM과 이전 DOM을 비교하여 차이가 있는 DOM만 업데이트하는 방식 입니다.</p>
+          <img class="w-100" src="https://soshace.com/wp-content/uploads/2019/12/virtual-dom-vs-dom-1.jpg" alt="virtual-dom-vs-dom">
         </div>
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
       <a href="https://developer.mozilla.org/ko/docs/Glossary/DOM">https://developer.mozilla.org/ko/docs/Glossary/DOM</a>
+      <a href="https://d2.naver.com/helloworld/59361">https://d2.naver.com/helloworld/59361</a>
+      <a href="https://stackoverflow.com/questions/38834375/relationship-between-html-and-javascript-the-basics-of-frontend-development">https://stackoverflow.com/questions/38834375/relationship-between-html-and-javascript-the-basics-of-frontend-development</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction</a>
+      <a href="https://www.geeksforgeeks.org/reactjs-virtual-dom/">https://www.geeksforgeeks.org/reactjs-virtual-dom/</a>
+      <a href="https://doqtqu.tistory.com/316">https://doqtqu.tistory.com/316</a>
     </div>
   </div>
 </template>

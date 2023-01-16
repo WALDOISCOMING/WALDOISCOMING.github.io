@@ -71,7 +71,24 @@
             Breadcrumb: () => import('@/components/Breadcrumb'),
             FooterTwo: () => import('@/components/FooterTwo'),
         },
-
+        beforeRouteEnter(to, from, next) {
+            const { page = null } = to.query;
+            let finalNext;
+            if (!page) {
+                finalNext = {
+                    ...to,
+                    query: {
+                        ...to.query,
+                        page: 1,
+                    },
+                };
+            }
+            if (finalNext) {
+                next(finalNext);
+            } else {
+                next();
+            }
+        },
         data () {
             return {
                 jsonData,
@@ -94,7 +111,9 @@
             this.pageCount = Math.floor(this.jsonData.data.length / 12) ;
             if(this.jsonData.data.length%12 !== 0)
                 this.pageCount++;
-            this.onPage(parseInt(this.$route.query.page ?? 1));
+            this.page = parseInt(this.$route.query.page ?? 1);
+            this.page = this.page > this.pageCount ? 1 : this.page;
+            this.nowData = this.jsonData.data.slice((this.page-1) * 12 , (this.page-1) * 12 + 12)
         },
         methods: {
             onPage(index){
