@@ -26,7 +26,7 @@
                                     </h5>
                                     <div class="post-meta">
                                         <div class="post-category">
-                                            <n-link v-for="(category, i) in indexData.categories.slice(0, 1)" :key="i" :to="`/blog/category/${slugify(category)}`">{{ category }}</n-link>
+                                            <n-link v-for="(tag, i) in indexData.tags.slice(0, 1)" :key="i" :to="`/content?tag=${slugify(tag)}`">{{ tag }}</n-link>
                                         </div>
                                     </div>
                                 </div>

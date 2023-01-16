@@ -3,7 +3,7 @@
       {
           "id": 1,
           "title": "web 개발",
-          "url": "/web-development",
+          "url": "/content?tag=web-development",
           "image": "/img/index/web.png",
           "alt": "Web 개발",
           "categories": ["web-development"],
@@ -12,7 +12,7 @@
       {
           "id": 2,
           "title": "Android",
-          "url": "/android",
+          "url": "/content?tag=android",
           "image": "/img/index/android.png",
           "alt": "Web 개발",
           "categories": ["android", "java"],

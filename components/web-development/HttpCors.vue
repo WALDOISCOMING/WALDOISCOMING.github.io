@@ -66,7 +66,7 @@
             xhr.setRequestHeader('Ping-Other', 'pingpong');
             xhr.setRequestHeader('Content-Type', 'application/xml');
             xhr.onreadystatechange = handler;
-            xhr.send('<person><name>Arun</name></person>');
+            xhr.send('<div>Arun</div>');
           </pre>
           <p class="inner-blog-text-50">위의 예제는 POST 요청과 함께 함께 보낼 XML body를 만듭니다. 또한 비표준 HTTP Ping-Other 요청 헤더가 설정됩니다. 이러한 헤더는 HTTP/1.1의 일부가 아니지만 일반적으로 웹 응용 프로그램에 유용합니다. Content-Type 이 application/xml이고, 사용자 정의 헤더가 설정되었기 때문에 이 요청은 preflighted 처리됩니다.</p>
           <img class="w-100" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/preflight_correct.png" alt="preflight_correct image">
@@ -111,7 +111,7 @@
             Pragma: no-cache
             Cache-Control: no-cache
 
-            <person><name>Arun</name></person>
+            <div>Arun</div>
 
             HTTP/1.1 200 OK
             Date: Mon, 01 Dec 2008 01:15:40 GMT
