@@ -66,7 +66,7 @@
         "id": 7,
         "title": "javascript ECMA SCript(ES)",
         "slug": "javascript-es",
-        "image": "/img/index/web.png",
+        "image": "/img/index/ecma-script.jpg",
         "alt": "web서버와 was 개념",
         "component": "web-development/JSECMA",
         "categories": ["web-development"],

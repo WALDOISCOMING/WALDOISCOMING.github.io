@@ -7,42 +7,14 @@
           <p>JavaScript는 standard library of objects(Date, Math 등)이 포함되어 있으며, 연산자, 제어 구조 및 명령문과 같은 핵심 언어 요소 집합이 포함되어 있습니다.</p>
           <p>표준화된 서비스를 제공하기 위하여, ECMAScript라고 하는 이 표준화된 JavaScript 로 애플리케이션에서 동일한 방식으로 동작됩니다. 이 ECMA에 관한 상세 내용은 이후에 상세하게 정리합니다.</p>
           <p>그러면 이제 아래에 있는 console.log("Hello, world!")를 console.log("hello, world!")로 바꾸신 뒤 '입력 스크립트 Run' 버튼을 눌러주세요.</p>
-          <no-ssr placeholder="Codemirror Loading...">
-            <div align="right">
-              <button class="brook-btn bk-btn-pink" @click="code = ''">
-                입력 스크립트 Clear
-              </button>
-              <button  class="brook-btn bk-btn-theme" @click="onScriptClick(codeMirrorList[0].code, codeMirrorList[0].targetId)">
-                입력 스크립트 Run
-              </button>
-            </div>
-            <codemirror
-              @input="onCodeChange($event, 0)"
-              :value="codeMirrorList[0].code">
-            </codemirror>
-            <div id="codemirror-content-01"></div>
-          </no-ssr>
+          <CodeMirrorComponent :code="codeMirrorList[0].code" />
         </div>
         <div class="desc mt--45 mb--50">
           <p>JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴</p>
           <p class="inner-blog-text-10"><li>기본</li></p>
           <p class="inner-blog-text-30">JavaScript는 대소문자를 구별하며 유니코드 문자셋을 이용합니다. 예를 들면, Früh(독일어로 "이른")을 변수명으로 사용할 수도 있습니다.</p>
           <p class="inner-blog-text-30">JavaScript에서는 명령을 명령문(statement) (en-US)이라고 부르며, 세미콜론(;)으로 구분합니다. 명령문이 한 줄을 다 차지할 경우에는 세미콜론이 필요하지 않습니다. 그러나 한 줄에 두 개 이상의 명령문이 필요하다면 반드시 세미콜론으로 구분해야 합니다.</p>
-          <no-ssr placeholder="Codemirror Loading...">
-            <div align="right">
-              <button class="brook-btn bk-btn-pink" @click="code = ''">
-                입력 스크립트 Clear
-              </button>
-              <button  class="brook-btn bk-btn-theme" @click="onScriptClick(codeMirrorList[1].code, codeMirrorList[1].targetId)">
-                입력 스크립트 Run
-              </button>
-            </div>
-            <codemirror
-              @input="onCodeChange($event, 1)"
-              :value="codeMirrorList[1].code">
-            </codemirror>
-            <div id="codemirror-content-02"></div>
-          </no-ssr>
+          <CodeMirrorComponent :code="codeMirrorList[1].code" />
           <p class="inner-blog-text-10"><li>선언</li></p>
           <p class="inner-blog-text-30">JavaScript의 선언에는 3가지 방법이 있습니다.</p>
           <p class="inner-blog-text-50">var : 변수를 선언. 추가로 동시에 값을 초기화.</p>
@@ -61,21 +33,7 @@
           <p class="inner-blog-text-50">undefined 값은 불리언 맥락(context)에서 사용될 때 false로 동작합니다.</p>
           <p class="inner-blog-text-50">undefined 값은 수치 맥락에서 사용될 때 NaN으로 변환됩니다.</p>
           <p class="inner-blog-text-50">null 값을 평가할 때, 수치 맥락에서는 0으로, 불리언 맥락에서는 false로 동작합니다.</p>
-          <no-ssr placeholder="Codemirror Loading...">
-            <div align="right">
-              <button class="brook-btn bk-btn-pink" @click="code = ''">
-                입력 스크립트 Clear
-              </button>
-              <button  class="brook-btn bk-btn-theme" @click="onScriptClick(codeMirrorList[2].code, codeMirrorList[2].targetId)">
-                입력 스크립트 Run
-              </button>
-            </div>
-            <codemirror
-              @input="onCodeChange($event, 2)"
-              :value="codeMirrorList[2].code">
-            </codemirror>
-            <div id="codemirror-content-03"></div>
-          </no-ssr>
+          <CodeMirrorComponent :code="codeMirrorList[2].code" />
           <p class="inner-blog-text-30">변수 스코프</p>
           <p class="inner-blog-text-50">어떤 함수의 바깥에 변수를 선언하면, 현재 문서의 다른 코드에 해당 변수를 사용할 수 있기에 전역 변수라고 합니다. 만약 함수 내부에 변수를 선언하면, 오직 그 함수 내에서만 사용할 수 있기에 지역 변수라고 부릅니다.</p>
           <p class="inner-blog-text-50">ECMAScript 2015 이전의 JavaScript는 블록 문 스코프가 없습니다. 그래서 오히려, 블록 내에 선언된 변수는 그 블록 내에 존재하는 함수(혹은 전역 스코프)에 지역적입니다.</p>
@@ -96,23 +54,8 @@
           <p class="inner-blog-text-30">변수 호이스팅(Hoisting)</p>
           <p class="inner-blog-text-50">자바스크립트 함수는 실행되기 전 함수 안에 필요한 변수값들을 모두 모아서 유효 범위{} 의 최상단에 선언하는 개념입니다.</p>
           <p class="inner-blog-text-50">var 변수는 끌어올려지지만, 할당되는 부분은 끌어 올려지지 않습니다. let/const 변수는 호이스팅이 발생되지 않습니다.</p>
-          <no-ssr placeholder="Codemirror Loading...">
-            <div align="right">
-              <button class="brook-btn bk-btn-pink" @click="code = ''">
-                입력 스크립트 Clear
-              </button>
-              <button  class="brook-btn bk-btn-theme" @click="onScriptClick(codeMirrorList[3].code, codeMirrorList[3].targetId)">
-                입력 스크립트 Run
-              </button>
-            </div>
-            <codemirror
-              @input="onCodeChange($event, 3)"
-              :value="codeMirrorList[3].code">
-            </codemirror>
-            <div id="codemirror-content-04"></div>
-          </no-ssr>
-          <p class="inner-blog-text-30">함수 호이스팅(Hoisting)</p>
-          <p class="inner-blog-text-50">함수에서는 함수 선언으로는 호이스팅되지만 함수 표현식으로는 호이스팅 되지 않습니다.</p>
+          <CodeMirrorComponent :code="codeMirrorList[3].code" />
+
           <pre>
             /* 함수 선언 */
             foo(); // "bar"
@@ -158,28 +101,29 @@
 
 <script>
   import MirrorConsole from 'codemirror-console';
+  import CodeMirrorComponent from '/components/CodeMirrorComponent'
     export default {
         name: 'JS',
         components: {
+          CodeMirrorComponent
         },
         data () {
             return {
               codeMirrorList: [
                 {
-                  code : 'console.log("Hello, world!")',
-                  targetId : 'codemirror-content-01',
+                  code : `console.log("Hello, world!")`
                 },
                 {
-                  code : 'var 갑을 = "병정";\nvar Früh = "foobar";\nconsole.log("갑을", 갑을);\nconsole.log("Früh", Früh);',
-                  targetId : 'codemirror-content-02',
+                  code :
+                    `var 갑을 = "병정";\nvar Früh = "foobar";\nconsole.log("갑을", 갑을);\nconsole.log("Früh", Früh);`
                 },
                 {
-                  code : 'var a;\nconsole.log(!a);\nvar b;\nconsole.log(b+2);\nvar c = null;\nconsole.log(c*24)',
-                  targetId : 'codemirror-content-03',
+                  code :
+                  `var a;\nconsole.log(!a);\nvar b;\nconsole.log(b+2);\nvar c = null;\nconsole.log(c*24)`
                 },
                 {
-                  code : '// var v;\nconsole.log(`v가 선언 되었습니다. v : ${v}`);\nvar v = "Hello Var";\nconsole.log(`v가 할당되었습니다. v : ${v}`);\nlet l = "Hello Let";\nconsole.log(`l가 선언/할당 되었습니다. l : ${l}`);',
-                  targetId : 'codemirror-content-04',
+                  code :
+                  '// var v;\nconsole.log(`v가 선언 되었습니다. v :  ${v}`);\nvar v = "Hello Var";\nconsole.log(`가 할당되었습니다. v : ${v}`);\nlet l = "Hello Let";\nconsole.log(`l가 선언/할당 되었습니다. l :${l}`);'
                 }
               ],
             }
@@ -188,42 +132,6 @@
         mounted () {
         },
         methods: {
-          onCmReady(cm) {
-            console.log('the editor is readied!', cm)
-          },
-          onCmFocus(cm) {
-            console.log('the editor is focus!', cm)
-          },
-          onScriptClick(newCode, targetId){
-            var editor = new MirrorConsole();
-            editor.setText(newCode);
-
-            document.getElementById(targetId).innerHTML = '';
-            //document.getElementById(targetId).id = targetId;
-            var tmp = document.createElement("div");
-            document.getElementById(targetId).appendChild(tmp);
-            editor.swapWithElement(tmp); // insert editor
-            var consoleMock = {
-              log: function (arg) {
-                var line = document.createElement("div");
-                line.appendChild(document.createTextNode(arg));
-                document.getElementById(targetId).appendChild(line);
-              }
-            }
-            editor.runInContext({ console: consoleMock }, function (error, result) {
-              if (error) {
-                var line = document.createElement("div");
-                line.appendChild(document.createTextNode(error));
-                document.getElementById(targetId).appendChild(line);
-                console.error('error', error);
-              }
-            });
-            editor.destroy();// remote editor
-          },
-
-          onCodeChange(newCode,index) {
-            this.codeMirrorList[index].code = newCode;
-          }
         },
     };
 </script>
