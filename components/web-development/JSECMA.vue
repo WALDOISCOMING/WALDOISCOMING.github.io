@@ -304,7 +304,7 @@
           <p class="inner-blog-text-10">ECMA에서 추가되는 script기능들은 적절하고, 효과적인 기능들이 많습니다.</p>
           <p class="inner-blog-text-10">하지만, 최신 ECMA가 적용되지 않은 브라우저라면, 이러한 기능들을 읽지 못하여 소스에서 오류가 발생됩니다.</p>
           <p class="inner-blog-text-10">매번 문제를 발생하던 IE만이 아니라, 2020년도의 ECMA script가 적용된 기능은 이전에서는 읽지 못하여 오류가 발생될 것 입니다.</p>
-          <p class="inner-blog-text-10">이러한 문제를 회피하기 위해, polyfill와 babel을 통해 이슈를 회피했고 다음 장에서 설명하겠습니다.</p>
+          <p class="inner-blog-text-10">이러한 문제를 회피하기 위해, babel을 통해 이슈를 회피했고 이것은 다음 장에서 설명하겠습니다.</p>
         </div>
     </div>
     <div class="mt--45 mb--50">

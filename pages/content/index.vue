@@ -25,9 +25,7 @@
                                         <n-link :to="`/content/${ddata.slug}`">{{ ddata.title }}</n-link>
                                     </h5>
                                     <div class="post-meta">
-                                        <div class="post-category">
-                                            <n-link v-for="(tag, i) in ddata.tags.slice(0, 1)" :key="i" :to="`/content?tag=${slugify(tag)}`">{{ tag }}</n-link>                                            
-                                        </div>
+                                        <div class="post-category" v-for="(tag, i) in ddata.tags.slice(0, 5)" @click="onClickTag(tag)" style="cursor:pointer"> {{tag}} </div>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +108,6 @@
 
         mounted () {
             document.body.classList.add('template-color-1', 'template-font-1')
-            // "tags": ["web-development", "web"]
             this.tag = this.$route.query.tag ?? '';
             if(this.tag === '') {
                 this.parsedJsonData = this.jsonData;
@@ -131,11 +128,26 @@
             this.nowData = this.parsedJsonData.data.slice((this.page-1) * 12 , (this.page-1) * 12 + 12)
         },
         methods: {
+            onClickTag(inputTag){
+                if(inputTag === this.tag) return;
+                this.tag = inputTag ?? '';
+                this.page = 1;
+                this.onPage(this.page);
+            },
             onPage(index){
+                if(this.tag === '') {
+                    this.parsedJsonData = this.jsonData;
+                } else {
+                    this.parsedJsonData.data = [];
+                    for(let i=0;i<this.jsonData.data.length;i++) {
+                        if(this.jsonData.data[i].tags.includes(this.tag))
+                            this.parsedJsonData.data.push(this.jsonData.data[i])
+                    }
+                }
                 this.page = index;
                 this.page = this.page > this.pageCount ? 1 : this.page;
                 this.nowData = this.parsedJsonData.data.slice((this.page-1) * 12 , (this.page-1) * 12 + 12)
-                this.$router.push({path: this.$route.path, query: { page: this.page}})
+                this.$router.push({path: this.$route.path, query: { page: this.page , tag:this.tag }})
             },
         },
 

@@ -40,7 +40,7 @@
         "alt": "SSR과 CSR, SPA",
         "component": "web-development/SSRCSR",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development", "SSR", "CSR", "SPA", "SSG"]
     },
     {
         "id": 5,
@@ -50,45 +50,47 @@
         "alt": "html Dom 이란",
         "component": "web-development/Dom",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development", "dom"]
     },
     {
         "id": 6,
         "title": "javascript 기초 개념",
         "slug": "javascript",
         "image": "/img/index/javascript-logo-svgrepo-com.svg",
-        "alt": "web서버와 was 개념",
+        "alt": "javascript 기초 개념",
         "component": "web-development/JS",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development", "javascript"]
     },
     {
         "id": 7,
         "title": "javascript ECMA SCript(ES)",
         "slug": "javascript-es",
         "image": "/img/index/ecma-script.jpg",
-        "alt": "web서버와 was 개념",
+        "alt": "javascript ECMA",
         "component": "web-development/JSECMA",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development", "javascript", "ECMA", "javascript-es"]
     },
     {
         "id": 8,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "title": "transcompile과 polyfill 기초 개념",
+        "slug": "transcompile-polyfill",
+        "image": "https://user-images.githubusercontent.com/81942/57974825-ccd2d280-7994-11e9-8cf4-d9f4d4a9f624.png",
+        "component": "web-development/TranscompileAndPolyfill",
+        "alt": "babel",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development","transcompile", "polyfills","babel"]
     },
     {
         "id": 9,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "title": "웹팩 기초 개념",
+        "slug": "webpack",
+        "image": "https://www.cognizantsoftvision.com/wp-content/uploads/2017/09/05231637/Full-Stack-Introduction-to-Webpack.docx-2.jpg",
+        "alt": "웹팩 기초 개념",
+        "component": "web-development/WebPack",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development", "web-pack"]
     },
     {
         "id": 10,
