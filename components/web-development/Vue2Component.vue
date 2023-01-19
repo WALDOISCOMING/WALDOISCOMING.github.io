@@ -92,9 +92,9 @@
 
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide">https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide</a><br/>
-      <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_Types#%EA%B8%B0%EB%B3%B8">https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_Types#%EA%B8%B0%EB%B3%B8</a><br/>
-      <a href="https://gmlwjd9405.github.io/2019/04/22/javascript-hoisting.html">https://gmlwjd9405.github.io/2019/04/22/javascript-hoisting.html</a><br/>
+      <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide">https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide</a>
+      <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_Types#%EA%B8%B0%EB%B3%B8">https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_Types#%EA%B8%B0%EB%B3%B8</a>
+      <a href="https://gmlwjd9405.github.io/2019/04/22/javascript-hoisting.html">https://gmlwjd9405.github.io/2019/04/22/javascript-hoisting.html</a>
     </div>
   </div>
 </template>
@@ -103,7 +103,7 @@
   import MirrorConsole from 'codemirror-console';
   import CodeMirrorComponent from '/components/CodeMirrorComponent'
     export default {
-        name: 'JS',
+        name: 'Vue2Component',
         components: {
           CodeMirrorComponent
         },

@@ -309,9 +309,9 @@
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://www.howdy-mj.me/javascript/how-to-read-ecmascript">https://www.howdy-mj.me/javascript/how-to-read-ecmascript</a>
-      <a href="https://curryyou.tistory.com/200">https://curryyou.tistory.com/200</a>
-      <a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a>
+      <a href="https://www.howdy-mj.me/javascript/how-to-read-ecmascript">https://www.howdy-mj.me/javascript/how-to-read-ecmascript</a><br/>
+      <a href="https://curryyou.tistory.com/200">https://curryyou.tistory.com/200</a><br/>
+      <a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a><br/>
     </div>
   </div>
 </template>
@@ -320,7 +320,7 @@
   import MirrorConsole from 'codemirror-console';
   import CodeMirrorComponent from '/components/CodeMirrorComponent'
     export default {
-        name: 'JS',
+        name: 'JSECMA',
         components: {
           CodeMirrorComponent
         },

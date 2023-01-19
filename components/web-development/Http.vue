@@ -25,7 +25,7 @@
             <p class="inner-blog-text-30">Status message : 상태 코드의 짧은 설명을 나타내는 상태 메시지. </p>
             <p class="inner-blog-text-30">HTTP Headers : request HTTP Headers와 비슷한, HTTP 헤더들</p>
             <p class="inner-blog-text-30">Body : 가져온 리소스가 포함되는 본문</p>
-            <img class="w-100" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" alt="http_response arch">        
+            <img class="w-100" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" alt="http_response arch">
         </div>
 
         <div class="desc mt--45 mb--50">
@@ -165,8 +165,8 @@
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Overview">https://developer.mozilla.org/ko/docs/Web/HTTP/Overview</a>
-      <a href="https://dkrnfls.tistory.com/289#HTTP%-F---%EA%B-%BC%--HTTP%-F---%EC%-D%--%--%EC%B-%A-%EC%-D%B-%EB%-A%--%-F">https://dkrnfls.tistory.com/289#HTTP%-F---%EA%B-%BC%--HTTP%-F---%EC%-D%--%--%EC%B-%A-%EC%-D%B-%EB%-A%--%-F</a>
+      <a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Overview">https://developer.mozilla.org/ko/docs/Web/HTTP/Overview</a><br/>
+      <a href="https://dkrnfls.tistory.com/289#HTTP%-F---%EA%B-%BC%--HTTP%-F---%EC%-D%--%--%EC%B-%A-%EC%-D%B-%EB%-A%--%-F">https://dkrnfls.tistory.com/289#HTTP%-F---%EA%B-%BC%--HTTP%-F---%EC%-D%--%--%EC%B-%A-%EC%-D%B-%EB%-A%--%-F</a><br/>
     </div>
   </div>
 </template>

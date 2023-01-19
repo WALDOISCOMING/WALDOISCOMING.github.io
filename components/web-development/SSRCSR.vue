@@ -46,9 +46,9 @@
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://velog.io/@vagabondms/%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%84%B0%EB%94%94-SSR%EA%B3%BC-CSR%EC%9D%98-%EC%B0%A8%EC%9D%B4#2-csr%EC%9D%98-%EC%A0%95%EC%9D%98%EC%99%80-%EC%84%A4%EB%AA%85">https://velog.io/@vagabondms/%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%84%B0%EB%94%94-SSR%EA%B3%BC-CSR%EC%9D%98-%EC%B0%A8%EC%9D%B4#2-csr%EC%9D%98-%EC%A0%95%EC%9D%98%EC%99%80-%EC%84%A4%EB%AA%85</a>
-      <a href="https://velog.io/@hlna0308/SPA%EC%99%80-CSR%EC%9D%80-%EA%B0%99%EC%9D%84%EA%B9%8C">https://velog.io/@hlna0308/SPA%EC%99%80-CSR%EC%9D%80-%EA%B0%99%EC%9D%84%EA%B9%8C</a>
-      <a href="https://ajdkfl6445.gitbook.io/study/web/csr-vs-ssr-vs-ssg#static-site-generator-ssg">https://ajdkfl6445.gitbook.io/study/web/csr-vs-ssr-vs-ssg#static-site-generator-ssg</a>
+      <a href="https://velog.io/@vagabondms/%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%84%B0%EB%94%94-SSR%EA%B3%BC-CSR%EC%9D%98-%EC%B0%A8%EC%9D%B4#2-csr%EC%9D%98-%EC%A0%95%EC%9D%98%EC%99%80-%EC%84%A4%EB%AA%85">https://velog.io/@vagabondms/%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%84%B0%EB%94%94-SSR%EA%B3%BC-CSR%EC%9D%98-%EC%B0%A8%EC%9D%B4#2-csr%EC%9D%98-%EC%A0%95%EC%9D%98%EC%99%80-%EC%84%A4%EB%AA%85</a><br/>
+      <a href="https://velog.io/@hlna0308/SPA%EC%99%80-CSR%EC%9D%80-%EA%B0%99%EC%9D%84%EA%B9%8C">https://velog.io/@hlna0308/SPA%EC%99%80-CSR%EC%9D%80-%EA%B0%99%EC%9D%84%EA%B9%8C</a><br/>
+      <a href="https://ajdkfl6445.gitbook.io/study/web/csr-vs-ssr-vs-ssg#static-site-generator-ssg">https://ajdkfl6445.gitbook.io/study/web/csr-vs-ssr-vs-ssg#static-site-generator-ssg</a><br/>
     </div>
   </div>
 </template>

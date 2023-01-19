@@ -148,12 +148,12 @@
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://developer.mozilla.org/ko/docs/Glossary/DOM">https://developer.mozilla.org/ko/docs/Glossary/DOM</a>
-      <a href="https://d2.naver.com/helloworld/59361">https://d2.naver.com/helloworld/59361</a>
-      <a href="https://stackoverflow.com/questions/38834375/relationship-between-html-and-javascript-the-basics-of-frontend-development">https://stackoverflow.com/questions/38834375/relationship-between-html-and-javascript-the-basics-of-frontend-development</a>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction</a>
-      <a href="https://www.geeksforgeeks.org/reactjs-virtual-dom/">https://www.geeksforgeeks.org/reactjs-virtual-dom/</a>
-      <a href="https://doqtqu.tistory.com/316">https://doqtqu.tistory.com/316</a>
+      <a href="https://developer.mozilla.org/ko/docs/Glossary/DOM">https://developer.mozilla.org/ko/docs/Glossary/DOM</a><br/>
+      <a href="https://d2.naver.com/helloworld/59361">https://d2.naver.com/helloworld/59361</a><br/>
+      <a href="https://stackoverflow.com/questions/38834375/relationship-between-html-and-javascript-the-basics-of-frontend-development">https://stackoverflow.com/questions/38834375/relationship-between-html-and-javascript-the-basics-of-frontend-development</a><br/>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction</a><br/>
+      <a href="https://www.geeksforgeeks.org/reactjs-virtual-dom/">https://www.geeksforgeeks.org/reactjs-virtual-dom/</a><br/>
+      <a href="https://doqtqu.tistory.com/316">https://doqtqu.tistory.com/316</a><br/>
     </div>
   </div>
 </template>

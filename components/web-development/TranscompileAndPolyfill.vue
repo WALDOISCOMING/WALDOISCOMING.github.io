@@ -63,10 +63,11 @@ onMounted(() => {
 &lt;/script&gt;
             </pre>
           </p>
-          <p class="inner-blog-text-30">위 내용을 작성하신 뒤, cmd에 npm run serve을 실행뒤 브라우저에서 개발자모드(크롬 F12)를 키신 뒤, 아래와 같이 로그가 뜨는지 확인합니다.</p>
+          <p class="inner-blog-text-30">위 내용을 작성하신 뒤, <strong>cmd)</strong>npm install, <strong>cmd)</strong>npm run serve을 실행뒤 브라우저에서 개발자모드(크롬 F12)를 키신 뒤, 아래와 같이 로그가 뜨는지 확인합니다.</p>
           <img class="w-100" src="/img/web-development/transpoly-serve-log.png" alt="babel transcompile">
           <p class="inner-blog-text-30">상세 스펙은 <a href="https://babeljs.io/docs/en/babel-preset-env">https://babeljs.io/docs/en/babel-preset-env</a> 에서 확인하세요.</p>
           <p class="inner-blog-text-30">plugin-transform-runtime core-js 또는 @babel/polyfill 을 직접 import해서 생기는 global scope 오염 문제를(Promise, Set Map..) sandboxed 환경을 생성하여 해결합니다.</p>
+          <p class="inner-blog-text-30">이제 <strong>cmd)</strong>npm build를 하여 transcompile, polyfill를 진행해 봅시다.</p>
           <p class="inner-blog-text-30"><strong>babel.config.js</strong>
             <pre>
 module.exports = {
@@ -74,15 +75,15 @@ module.exports = {
 	  [
 		  '@vue/cli-plugin-babel/preset',
 		  {
-			"targets": { // 타겟 버전 설정
-				"browsers" : ["last 2 versions", "ie >= 10"]
+			"targets": {
+				"browsers" : ["last 2 versions", "ie >= 11"]
 			},
-      "useBuiltIns": "usage", // 사용한 내역만
+      "useBuiltIns": "usage" // usage는 사용한 라이브러리만, "entry"는 사용하지 않은 내용도 포함합니다.
 		  }
 	  ]
 	],
   plugins: [
-    [ // polyfill 설정.
+    [
       '@babel/plugin-transform-runtime',
       {
         "corejs": "3",
@@ -91,28 +92,73 @@ module.exports = {
   ],
 }
             </pre>
+            <pre>package.json
+{
+...
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.20.7",
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },...
+}
+            </pre>
           </p>
           <p class="inner-blog-text-30">이후, <strong>cmd)</strong>npm run build를 한 뒤, dist(기본 빌드 폴더)로 진입하여 app.hashcode.js에서 내용을 확인합니다. </p>
           <p class="inner-blog-text-30"><strong>app.hash.js</strong>에서는 arrow function이 변환된 것이 확인됩니다.
-            <pre>
+            <pre>app.hash.js
+...
 (function(){var t=function(t,e){return t+e};console.log("arrow Function",t(1,2))
+...
             </pre>
+            <pre>chunk-vendors.hash.js.map
+...
+node_modules/core-js/modules/es.promise.js
+...
+            </pre>
+            <pre>node_modules/core-js/modules/es.promise.js
+...
+// TODO: Remove this module from `core-js@4` since it's split to modules listed below
+require('../modules/es.promise.constructor');
+require('../modules/es.promise.all');
+require('../modules/es.promise.catch');
+require('../modules/es.promise.race');
+require('../modules/es.promise.reject');
+require('../modules/es.promise.resolve');
+...
+            </pre>
+            <p class="inner-blog-text-30">이를 통해, 정상적으로 transcompile과 polyfill가 되는걸 확인 가능합니다.</p>
+            <p class="inner-blog-text-30">정상적으로 진행한것 같은데, 문제가 발생되시면 node_modules 폴더를 제거 후, <strong>cmd)</strong>npm install <strong>cmd)</strong>npm run build 진행해 주세요.</p>
           </p>
         </div>
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://ideveloper2.tistory.com/166">https://ideveloper2.tistory.com/166</a>
-      <a href="https://babeljs.io/docs/en/">https://babeljs.io/docs/en/</a>
-      <a href="https://royleej9.tistory.com/entry/babel-setting">https://royleej9.tistory.com/entry/babel-setting</a>
-      <a href="https://tech.kakao.com/2020/12/01/frontend-growth-02/">https://tech.kakao.com/2020/12/01/frontend-growth-02/</a>
+      <a href="https://ideveloper2.tistory.com/166">https://ideveloper2.tistory.com/166</a><br/>
+      <a href="https://babeljs.io/docs/en/">https://babeljs.io/docs/en/</a><br/>
+      <a href="https://royleej9.tistory.com/entry/babel-setting">https://royleej9.tistory.com/entry/babel-setting</a><br/>
+      <a href="https://tech.kakao.com/2020/12/01/frontend-growth-02/">https://tech.kakao.com/2020/12/01/frontend-growth-02/</a><br/>
     </div>
   </div>
 </template>
 
 <script>
     export default {
-        name: 'Babel',
+        name: 'TranscompileAndPolyfill',
         components: {
         },
         data () {

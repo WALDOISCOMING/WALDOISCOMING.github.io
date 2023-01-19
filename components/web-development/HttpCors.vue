@@ -6,7 +6,7 @@
           <p>Cross Origin Resource Sharing로, 서로 다른 origin(출처) 간 HTTP reqeust가 가능하도록 해주는 표준입니다.</p>
           <p>HTTP request는 기본적으로 Cross-Site HTTP Requests가 가능. 이는 img, script 등에서 타 도메인 리소스(이미지, 스크립트 등)를 참조 할 수 있습니다.</p>
           <img class="w-100" src="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png" alt="cors_principle image">
-          <p>아래는 naver 사이트의 html의 img에서 www.naver.com이 아닌 타 url을 접근 하여 이미지를 가져오고 있습니다.</p>          
+          <p>아래는 naver 사이트의 html의 img에서 www.naver.com이 아닌 타 url을 접근 하여 이미지를 가져오고 있습니다.</p>
           <img class="w-100" src="/img/web-development/naver-cors.png" alt="naver cors-example image">
           <p>그러나, 보안상의 이유로 브라우저에서는 script 로 둘러쌓인 내부에서 작성된 cross-origin HTTP를 제한하고 있습니다. 예를 들어 XMLHttpRequest나 Fatch API는 same-origin Policy를 따르기 때문에 올바른 CORS header를 포함하지 않는 한 다른 origin에 request를 할 수 없습니다. 때문에 서버 개발자는 CORS을 이해하고 스펙을 따라 HTTP request에 응답을 해야합니다.</p>
           <img class="w-100" src="/img/web-development/cors-example.png" alt="cors-example image">
@@ -221,7 +221,7 @@
     </div>
     <div class="mt--45 mb--50">
       <p>참고자료</p>
-      <a href="https://developer.mozilla.org/ko/docs/Web/HTTP/CORS">https://developer.mozilla.org/ko/docs/Web/HTTP/CORS</a>
+      <a href="https://developer.mozilla.org/ko/docs/Web/HTTP/CORS">https://developer.mozilla.org/ko/docs/Web/HTTP/CORS</a><br/>
     </div>
   </div>
 </template>

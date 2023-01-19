@@ -95,52 +95,56 @@
     {
         "id": 10,
         "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "slug": "vuejs-basic",
+        "image": "/img/index/vue.png",
+        "alt": "vuejs-basic",
+        "component": "web-development/Vue2Basic",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development","vue","vuejs"]
     },
     {
         "id": 11,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "title": "vuejs 컴포넌트",
+        "slug": "vuejs-component",
+        "image": "/img/index/vue.png",
+        "alt": "vuejs 컴포넌트",
+        "component": "web-development/Vue2Component",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development","vue","vuejs","component"]
     },
     {
         "id": 12,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "title": "vuejs store과 mixin",
+        "slug": "vuejs-store-mixin",
+        "image": "/img/index/vue.png",
+        "alt": "vuejs store과 mixin",
+        "component": "web-development/Vue2StoreMixin",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development","vue","vuejs","mixin"]
     },
     {
         "id": 13,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "title": "vuejs 3",
+        "slug": "vuejs3",
+        "image": "/img/index/vue.png",
+        "alt": "vuejs 3",
+        "component": "web-development/Vue3",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development","vue","vuejs","vue3"]
     },
     {
         "id": 14,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
+        "title": "nuxt 기초 개념",
+        "slug": "nuxt",
+        "image": "/img/index/nuxt.png",
+        "alt": "nuxt 기초 개념",
         "categories": ["web-development"],
-        "tags": ["web-development"]
+        "tags": ["web-development","nuxt","vue","vuejs"]
     },
     {
         "id": 15,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
+        "title": "Android 기초 개념",
+        "slug": "android",
         "image": "/img/index/web.png",
         "alt": "polyfills",
         "categories": ["web-development"],
