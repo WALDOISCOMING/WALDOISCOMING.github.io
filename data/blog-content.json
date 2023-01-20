@@ -106,7 +106,7 @@
         "id": 11,
         "title": "vuejs 컴포넌트",
         "slug": "vuejs-component",
-        "image": "/img/index/vue.png",
+        "image": "/img/web-development/vue-component.png",
         "alt": "vuejs 컴포넌트",
         "component": "web-development/Vue2Component",
         "categories": ["web-development"],

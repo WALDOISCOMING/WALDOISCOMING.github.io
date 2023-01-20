@@ -48,9 +48,9 @@
                                     </div>
                                 </div>
                             </article>
-                            <div class="post-nav-lisnt mb--45 wow move-up">                   
+                            <div class="post-nav-lisnt mb--45 wow move-up">
                                 <div class="nav-item previous"  v-if="preData">
-                                    <n-link :to="`/web-development/${preData.slug}`">
+                                    <n-link :to="`/content/${preData.slug}`">
                                         <div class="link-text">
                                             <span class="fa fa-arrow-left"></span>
                                             <p class="">Prev</p>
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                                 <div class="nav-item next mt_sm--30" v-if="nextData">
-                                    <n-link :to="`/web-development/${nextData.slug}`">
+                                    <n-link :to="`/content/${nextData.slug}`">
                                         <div class="link-text">
                                             <p class="">Next</p>
                                             <span class="fa fa-arrow-right"></span>
@@ -82,7 +82,7 @@
                             </div>
                             <!-- End Post Nav Links -->
                         </div>
-                    </div>                    
+                    </div>
                     <div class="col-lg-4 mt_md--40 mt_sm--40">
                         <!-- <BlogSidebar /> -->
                     </div>
@@ -125,6 +125,7 @@
             console.log(' this.$route.params.url',  this.$route.params.url)
             console.log(' this.$route.params.slug',  this.$route.params.slug)
             this.data = data.data.find(d => d.slug == this.$route.params.slug);
+            console.log('data',this.data)
             this.preData = data.data.find(d => d.id == (this.data.id -1));
             this.nextData = data.data.find(d => d.id == (this.data.id + 1));
             console.log('data',this.data)

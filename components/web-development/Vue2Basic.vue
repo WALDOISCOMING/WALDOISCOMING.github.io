@@ -84,15 +84,52 @@ document.getElementById('some-id').innerValue = 'updated value';</pre>
           <p class="inner-blog-text-30">정상적으로 설치가 되셨으면,(<strong>cmd)</strong> vue -V를 치고 정상적일 경우) <strong>cmd)</strong> vue create 프로젝트이름 으로 입력하시고, vue버전은 vue2으로 선택해주세요.</p>
           <p class="inner-blog-text-30">완료되시고, 프로젝트를 VS Code 등 에디터로 열면 아래와 같이 트리구조로 나타날 것 입니다.</p>
           <p class="inner-blog-text-30">
-            <pre>├─ src</br>   ├─ main.js</br>   ├─ App.vue</br>   ├─ components</br>      ├─ HelloWorld.vue</pre>
+            <pre>├─ node_modules</br>├─ public</br>├─ package.json</br>├─ vue.config.js</br>            ├─ src</br>   ├─ main.js</br>   ├─ App.vue</br>   ├─ components</br>      ├─ HelloWorld.vue</pre>
           </p>
+          <li class="inner-blog-text-30">node_modules : npm install 하여 설치된 라이브러리들이 설치되는 위치 입니다. 용량이 많으므로 .gitignore에 폴더 추가하여 push 되지 않도록 해주세요.</li>
+          <li class="inner-blog-text-30">public : 정적 자산(index.html, css, 이미지, js)가  있는 폴더입니다. 이후 설명할 src/assets와 다르게 웹팩의 처리가 되지 않습니다.</li>
+          <li class="inner-blog-text-30">package.json : 프로젝트 설정, 배포, 관리를 위한 문서입니다.</li>
+          <p class="inner-blog-text-50">
+            <pre>
+{
+  "name": "testapp", // 앱 이름
+  "version": "0.1.0", // 앱 버전
+  "private": true,
+  "scripts": { // 실행 스크립트 npm run scripts내용
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": { // 의존성(라이브러리)
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": { // 개발전용 의존성
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14"
+  },
+...
+}</pre>
+          </p>
+          <li class="inner-blog-text-30">vue.config.js : @vue/cli-service 사용하면 자동적으로 로드가 되며, 프로젝트에 대한 추가적일 설정을 담당합니다.</li>
+          <p class="inner-blog-text-50">프록시 통신, webpack.config.js을 대신한 웹팩 설정을 담당합니다.</p>
+          <li class="inner-blog-text-30">src : Vue 애플리케이션의 소스 디렉토리입니다.</li>
+          <p class="inner-blog-text-50">main.js : 이 파일은 애플리케이션의 진입점입니다. Vue 앱을 초기화하고 index.html 파일에서 어떤 HTML 엘리멘트를 앱에 붙여야 하는지 나타냅니다. 전역 컴포넌트나 부가적인 Vue 라이브러리를 등록합니다.</p>
+          <p class="inner-blog-text-50">App.vue: Vue 애플리케이션의 최상위 컴포넌트입니다. 라우터 형식을 사용하려면 이곳에 vue-router 컴포넌트를 추가해서 사용합니다.</p>
+          <p class="inner-blog-text-50">assets : CSS나 이미지 등의 정적 자산(static assets)을 저장하는 디렉토리입니다. 이 파일들은 src 디렉토리에 포함되어 있기 때문에 Webpack의 처리를 받습니다. 즉, Sass/SCSS나 Stylus와 같은 전처리 도구를 사용할 수 있습니다.</p>
+          <p class="inner-blog-text-50">그외 : 그외인 component, router, util javascript, plugin, mixin과 같은 내용들은 폴더와 상관없이, 유저가 import 시키면 정상적으로 동작됩니다.</p>
           <p class="inner-blog-text-30">Vue 앱은 new Vue를 통해 만들어진 루트 Vue 인스턴스로 구성되며 선택적으로 중첩이 가능하고 재사용 가능한 컴포넌트 트리로 구성됩니다. </p>
           <p class="inner-blog-text-30">main.js 에 진입하시면 new Vue로앱을 create해주고 있습니다. 이 create된 내용을 기반으로 components들은 중첩/재사용 되도록 구성됩니다.
             <pre>
 var vm = new Vue({
   // 옵션
-}).$mount("#app");
-            </pre>
+}).$mount("#app");</pre>
           </p>
           <p class="inner-blog-text-10">데이터와 메소드</p>
           <p class="inner-blog-text-30">Vue 인스턴스가 생성될 때 data 객체에 있는 모든 속성이 Vue의 반응형 시스템에 추가됩니다. 각 속성값이 변경될 때 뷰가 “반응”하여 새로운 값과 일치하도록 업데이트됩니다.</p>
@@ -672,37 +709,19 @@ data: {
       <a href="https://kr.vuejs.org/v2/guide/">https://kr.vuejs.org/v2/guide/</a><br/>
       <a href="https://wormwlrm.github.io/2018/12/29/Understanding-Vue-Lifecycle-hooks.html">https://wormwlrm.github.io/2018/12/29/Understanding-Vue-Lifecycle-hooks.html</a><br/>
       <a href="https://blog.jeongwoo.in/vue-js-watch%EC%99%80-computed-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%99%80-%EC%82%AC%EC%9A%A9%EB%B2%95-e2edce37ec34">https://blog.jeongwoo.in/vue-js-watch%EC%99%80-computed-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%99%80-%EC%82%AC%EC%9A%A9%EB%B2%95-e2edce37ec34</a><br/>
+      <a href="https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started</a>
+      <a href="https://codingcoding.tistory.com/483">https://codingcoding.tistory.com/483</a>
     </div>
   </div>
 </template>
 
 <script>
-  import MirrorConsole from 'codemirror-console';
-  import CodeMirrorComponent from '/components/CodeMirrorComponent'
     export default {
         name: 'Vue2Basic',
         components: {
-          CodeMirrorComponent
         },
         data () {
             return {
-              codeMirrorList: [
-                {
-                  code : `console.log("Hello, world!")`
-                },
-                {
-                  code :
-                    `var 갑을 = "병정";\nvar Früh = "foobar";\nconsole.log("갑을", 갑을);\nconsole.log("Früh", Früh);`
-                },
-                {
-                  code :
-                  `var a;\nconsole.log(!a);\nvar b;\nconsole.log(b+2);\nvar c = null;\nconsole.log(c*24)`
-                },
-                {
-                  code :
-                  '// var v;\nconsole.log(`v가 선언 되었습니다. v :  ${v}`);\nvar v = "Hello Var";\nconsole.log(`가 할당되었습니다. v : ${v}`);\nlet l = "Hello Let";\nconsole.log(`l가 선언/할당 되었습니다. l :${l}`);'
-                }
-              ],
               message: '안녕하세요.',
               seen : false,
               todos: [

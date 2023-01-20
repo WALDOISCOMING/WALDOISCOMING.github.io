@@ -1,5 +1,5 @@
 /*=========================
-Blog Details 
+Blog Details
 ============================*/
 
 
@@ -98,7 +98,7 @@ Blog Details
         &.next{
             text-align: right;
             a{
-                padding-right: 90px; 
+                padding-right: 90px;
                 .link-text{
                     span{
                         right: -61px;
@@ -117,7 +117,7 @@ Blog Details
 }
 
 /* ========================
-Start Comment Area 
+Start Comment Area
 ==========================*/
 .blog-details-wrapper{
     .audio-post{
@@ -196,7 +196,7 @@ Start Comment Area
 
         &.comment-reply{
             padding-left: 61px;
-            
+
             @media #{$sm-layout} {
                 padding-left: 30px;
             }
@@ -211,7 +211,7 @@ Start Comment Area
 }
 
 /* ====================
-    Contact Form 
+    Contact Form
 ======================*/
 .comment-form-wrapper{
     .contact-form{
@@ -226,7 +226,7 @@ Start Comment Area
 
 
 /* ====================
-Blog Main Quote 
+Blog Main Quote
 ======================*/
 .blog-main-quote{
     position: relative;
@@ -235,7 +235,7 @@ Blog Main Quote
 }
 
 /*===================================
- Post Return Button 
+ Post Return Button
  ==================================*/
 .blog-post-return-button {
     button {
@@ -281,4 +281,3 @@ Blog Main Quote
         width: 100%;
     }
 }
-
