@@ -160,12 +160,12 @@
                 {
                 hid: 'og:image',
                 property: 'og:image',
-                content: 'https://waldoiscoming.github.io/' + this.data.image
+                content: this.data.image
                 },
                 {
                 hid: 'og:image:secure_url',
                 property: 'og:image:secure_url',
-                content: 'https://waldoiscoming.github.io/' + this.data.image
+                content: this.data.image
                 },
                 {
                 hid: 'og:image:width',
