@@ -25,6 +25,9 @@ export default {
             { hid: 'og:title', property: 'og:title', content: 'WALDOISCOMING IT 기술 블로그' },
             { hid: 'og:description', property: 'og:description', content: 'WALDOISCOMING의 IT 기술 블로그입니다' },
             { hid: 'og:image', property: 'og:image', content: '/img/logo/brook.png' },            
+            { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: '/img/logo/brook.png' },   
+            { hid: 'og:image:width', property: 'og:image:width', content: '400' },           
+            { hid: 'og:image:height', property: 'og:image:height', content: '300' },                    
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

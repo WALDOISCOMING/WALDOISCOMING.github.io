@@ -162,6 +162,21 @@
                 property: 'og:image',
                 content: this.data.image
                 },
+                {
+                hid: 'og:image:secure_url',
+                property: 'og:image:secure_url',
+                content: this.data.image
+                },
+                {
+                hid: 'og:image:width',
+                property: 'og:image:width',
+                content: '400'
+                },
+                {
+                hid: 'og:image:height',
+                property: 'og:image:height',
+                content: '300'
+                },
             ]
         }
     }
