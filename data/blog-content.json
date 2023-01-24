@@ -8,6 +8,7 @@
           "slug": "web",
           "image": "/img/index/web.png",
           "alt": "web서버 기초 개념",
+          "description": "web서버 기초 개념에 대하여 알아봅니다",
           "component": "web-development/Web",
           "categories": ["web-development", "web"],
           "tags": ["web-development", "web"]
@@ -18,6 +19,7 @@
         "slug": "http",
         "image": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png",
         "alt": "HTTP 기초",
+        "description": "HTTP 기초 개념에 대하여 알아봅니다",
         "component": "web-development/Http",
         "categories": ["web-development","web","http"],
         "tags": ["web-development","web","http"]
@@ -28,6 +30,7 @@
         "slug": "http-cors",
         "image": "https://nordicapis.com/wp-content/uploads/What-is-CORS-.png",
         "alt": "HTTP Cors",
+        "description": "HTTP-Cors 기초 개념에 대하여 알아봅니다",
         "component": "web-development/HttpCors",
         "categories": ["web-development","web","http","http-cors","cors"],
         "tags": ["web-development","web","http","http-cors","cors"]
@@ -38,6 +41,7 @@
         "slug": "ssr-csr",
         "image": "https://www.growth-rocket.com/wp-content/uploads/2020/07/pros-and-cons.jpg",
         "alt": "SSR과 CSR, SPA",
+        "description": "SSR과 CSR, SPA 및 SSG에 대하여 알아봅니다",
         "component": "web-development/SSRCSR",
         "categories": ["web-development"],
         "tags": ["web-development", "SSR", "CSR", "SPA", "SSG"]
@@ -48,6 +52,7 @@
         "slug": "dom",
         "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg",
         "alt": "html Dom 이란",
+        "description": "HTML DOM에 대하여 알아봅니다",
         "component": "web-development/Dom",
         "categories": ["web-development"],
         "tags": ["web-development", "dom"]
@@ -58,6 +63,7 @@
         "slug": "javascript",
         "image": "/img/index/javascript-logo-svgrepo-com.svg",
         "alt": "javascript 기초 개념",
+        "description": "javascript 기초 개념에 대하여 알아봅니다",
         "component": "web-development/JS",
         "categories": ["web-development"],
         "tags": ["web-development", "javascript"]
@@ -68,6 +74,7 @@
         "slug": "javascript-es",
         "image": "/img/index/ecma-script.jpg",
         "alt": "javascript ECMA",
+        "description": "javascript의 ECMA 기초 개념 및 버전에 대하여 알아봅니다",
         "component": "web-development/JSECMA",
         "categories": ["web-development"],
         "tags": ["web-development", "javascript", "ECMA", "javascript-es"]
@@ -77,8 +84,9 @@
         "title": "transcompile과 polyfill 기초 개념",
         "slug": "transcompile-polyfill",
         "image": "https://user-images.githubusercontent.com/81942/57974825-ccd2d280-7994-11e9-8cf4-d9f4d4a9f624.png",
-        "component": "web-development/TranscompileAndPolyfill",
         "alt": "babel",
+        "description": "transcompile과 polyfill 기초 개념에 대하여 알아봅니다",
+        "component": "web-development/TranscompileAndPolyfill",
         "categories": ["web-development"],
         "tags": ["web-development","transcompile", "polyfills","babel"]
     },
@@ -88,6 +96,7 @@
         "slug": "webpack",
         "image": "https://www.cognizantsoftvision.com/wp-content/uploads/2017/09/05231637/Full-Stack-Introduction-to-Webpack.docx-2.jpg",
         "alt": "웹팩 기초 개념",
+        "description": "웹팩 기초 개념에 대하여 알아봅니다",
         "component": "web-development/WebPack",
         "categories": ["web-development"],
         "tags": ["web-development", "web-pack"]
@@ -98,6 +107,7 @@
         "slug": "vuejs-basic",
         "image": "/img/index/vue.png",
         "alt": "vuejs-basic",
+        "description": "vuejs 기초 개념에 대하여 알아봅니다",
         "component": "web-development/Vue2Basic",
         "categories": ["web-development"],
         "tags": ["web-development","vue","vuejs"]
@@ -108,6 +118,7 @@
         "slug": "vuejs-component",
         "image": "/img/web-development/vue-component.png",
         "alt": "vuejs 컴포넌트",
+        "description": "vuejs에서 컴포넌트의 개념에 대하여 알아봅니다",
         "component": "web-development/Vue2Component",
         "categories": ["web-development"],
         "tags": ["web-development","vue","vuejs","component"]
@@ -118,6 +129,7 @@
         "slug": "vuejs-store-mixin",
         "image": "/img/index/vue.png",
         "alt": "vuejs store과 mixin",
+        "description": "vuejs에서 store와 mixin 개념에 대하여 알아봅니다",
         "component": "web-development/Vue2StoreMixin",
         "categories": ["web-development"],
         "tags": ["web-development","vue","vuejs","mixin"]
@@ -145,10 +157,10 @@
         "id": 15,
         "title": "Android 기초 개념",
         "slug": "android",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
+        "image": "/img/index/android.png",
+        "alt": "android",
+        "categories": ["android"],
+        "tags": ["android"]
     },
     {
         "id": 16,

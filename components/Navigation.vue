@@ -9,7 +9,7 @@
                     <div class="container">
                         <div class="mega__list">
                             <li class="mega--title">
-                                HOME SAMPLES 01
+                                HOME SAMPLES 01수정필요
                                 <ul>
                                     <li>
                                         <nuxt-link to="/home-business"><span>Home Business</span></nuxt-link>

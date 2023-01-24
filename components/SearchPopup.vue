@@ -13,9 +13,9 @@
             <div class="search-content">
                 <form>
                     <label>
-                        <input type="search" placeholder="Enter search keyword…">
+                        <input type="search" placeholder="키워드를 입력해주세요.">
                     </label>
-                    <button class="search-submit"><i class="fa fa-search"></i></button>
+                    <button @click="searchKeyword" class="search-submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
         </div>
@@ -24,6 +24,10 @@
 
 <script>
     export default {
-        
+        methods: {
+            searchKeyword(){
+            
+            },
+        },
     };
 </script>

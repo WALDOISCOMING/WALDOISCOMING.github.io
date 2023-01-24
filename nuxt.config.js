@@ -14,11 +14,17 @@ export default {
     */
     head: {
         title: 'WALDOISCOMING IT 기술 블로그',
-        titleTemplate: 'WALDOISCOMING IT 기술 블로그 || %s',
+        titleTemplate: 'WALDOISCOMING IT 기술 블로그 %s',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+            { name: 'robots', content: 'index,follow' },
+            { name: 'content-language', content: 'kr' },
+            { hid: 'description', name: 'description', content: 'WALDOISCOMING의 IT 기술 블로그입니다' },
+            { name: 'author', content: 'WALDOISCOMING', },
+            { hid: 'og:title', property: 'og:title', content: 'WALDOISCOMING IT 기술 블로그' },
+            { hid: 'og:description', property: 'og:description', content: 'WALDOISCOMING의 IT 기술 블로그입니다' },
+            { hid: 'og:image', property: 'og:image', content: '/img/logo/brook.png' },            
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

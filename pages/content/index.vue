@@ -144,6 +144,9 @@
                             this.parsedJsonData.data.push(this.jsonData.data[i])
                     }
                 }
+                this.pageCount = Math.floor(this.parsedJsonData.data.length / 12) ;
+                if(this.parsedJsonData.data.length%12 !== 0)
+                    this.pageCount++;
                 this.page = index;
                 this.page = this.page > this.pageCount ? 1 : this.page;
                 this.nowData = this.parsedJsonData.data.slice((this.page-1) * 12 , (this.page-1) * 12 + 12)

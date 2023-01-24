@@ -122,16 +122,10 @@
         },
 
         mounted () {
-            console.log(' this.$route.params.url',  this.$route.params.url)
-            console.log(' this.$route.params.slug',  this.$route.params.slug)
             this.data = data.data.find(d => d.slug == this.$route.params.slug);
             console.log('data',this.data)
             this.preData = data.data.find(d => d.id == (this.data.id -1));
             this.nextData = data.data.find(d => d.id == (this.data.id + 1));
-            console.log('data',this.data)
-            console.log('data.data',data.data)
-            console.log('preData ',this.preData)
-            console.log('nextData ',this.nextData)
 
             this.onLoadComponent();
 
@@ -151,8 +145,26 @@
         },
         head() {
             return {
-                title: this.$route.params.slug
-            }
-        },
+                title: this.$route.params.slug,
+            meta: [
+                {
+                hid: 'og:title',
+                property: 'og:title',
+                content: this.data.tags
+                },
+                {
+                hid: 'og:description',
+                property: 'og:description',
+                content: this.data.description
+                },
+                {
+                hid: 'og:image',
+                property: 'og:image',
+                content: this.data.image
+                },
+            ]
+        }
+    }
+
     };
 </script>

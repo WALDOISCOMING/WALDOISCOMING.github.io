@@ -19,11 +19,11 @@
 
                     <div class="col-lg-2 col-sm-6 mt_mobile--40">
                         <div class="footer-widget text-var--2 menu--about">
-                            <h2 class="widgettitle">About us</h2>
+                            <h2 class="widgettitle">About</h2>
                             <div class="footer-menu">
                                 <ul class="ft-menu-list bk-hover">
                                     <li>
-                                        <n-link to="/about-us-01">About Us</n-link>
+                                        <n-link to="/about-us-01">About Me</n-link>
                                     </li>
                                     <li>
                                         <n-link to="/career">Career</n-link>

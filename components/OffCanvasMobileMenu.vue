@@ -11,7 +11,7 @@
                 <button class="mobile-close" @click="$emit('togglenav')"></button>
             </div>
             <div class="menu-content">
-                <MobileNavigation />
+                <!-- <MobileNavigation /> -->
             </div>
         </div>
     </div>
