@@ -300,6 +300,19 @@
           <p class="inner-blog-text-30">숫자 구분 기호(_)를 도입했습니다. 1000과 1_000은 동일하게 처리됩니다.</p>
         </div>
         <div class="desc mt--45 mb--50">
+          <p>Javascript 2022(2023년도 기준 최신본)</p>
+          <p class="inner-blog-text-10"><li>class private과 static</li></p>
+          <p class="inner-blog-text-30">속성/메소드 앞에 '#'을 붙이면, private field가 됩니다</p>
+          <p class="inner-blog-text-30">property를 초기화 하는데 constructor가 필요없어졌습니다</p>
+          <p class="inner-blog-text-30">static 메소드를 가질 수 있수 있습니다</p>
+          <p class="inner-blog-text-10"><li>Indexable한 값에서(배열/문자열) at()</li></p>
+          <p class="inner-blog-text-30">Indexable한 값 []안의 숫자로 값에 접근한 것과 마찬가지로, at()안의 숫자로도 접근할 수 있습니다. 마이너스로 뒤에서부터 요소를 조회할 수 있습니다.</p>
+          <p class="inner-blog-text-10"><li>Top-level await</li></p>
+          <p class="inner-blog-text-30">async함수가 없어도 await를 사용할 수 있습니다.</p>
+          <p class="inner-blog-text-10"><li>error.cause</li></p>
+          <p class="inner-blog-text-30">에러의 더 상세한 원인을 기술할 수 있습니다.</p>
+        </div>
+        <div class="desc mt--45 mb--50">
           <p>결론</p>
           <p class="inner-blog-text-10">ECMA에서 추가되는 script기능들은 적절하고, 효과적인 기능들이 많습니다.</p>
           <p class="inner-blog-text-10">하지만, 최신 ECMA가 적용되지 않은 브라우저라면, 이러한 기능들을 읽지 못하여 소스에서 오류가 발생됩니다.</p>
@@ -311,7 +324,8 @@
       <p>참고자료</p>
       <a href="https://www.howdy-mj.me/javascript/how-to-read-ecmascript">https://www.howdy-mj.me/javascript/how-to-read-ecmascript</a><br/>
       <a href="https://curryyou.tistory.com/200">https://curryyou.tistory.com/200</a><br/>
-      <a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a><br/>
+      <a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a>
+      <a href="https://velog.io/@outclassstudio/JS-ES2022%EC%97%90%EC%84%9C-%EC%B6%94%EA%B0%80%EB%90%9C-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%A0%95%EB%A6%AC">https://velog.io/@outclassstudio/JS-ES2022%EC%97%90%EC%84%9C-%EC%B6%94%EA%B0%80%EB%90%9C-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%A0%95%EB%A6%AC</a><br/>
     </div>
   </div>
 </template>

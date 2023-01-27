@@ -125,17 +125,27 @@
     },
     {
         "id": 12,
-        "title": "vuejs store과 mixin",
-        "slug": "vuejs-store-mixin",
-        "image": "/img/index/vue.png",
+        "title": "vuejs mixin과 store",
+        "slug": "vuejs-mixin-store",
+        "image": "/img/index/vuex.png",
         "alt": "vuejs store과 mixin",
-        "description": "vuejs에서 store와 mixin 개념에 대하여 알아봅니다",
-        "component": "web-development/Vue2StoreMixin",
+        "description": "vuejs에서 mixin과 store 개념에 대하여 알아봅니다",
+        "component": "web-development/Vue2MixinAndStore",
         "categories": ["web-development"],
-        "tags": ["web-development","vue","vuejs","mixin"]
+        "tags": ["web-development","vue","vuejs","mixin","vuex"]
     },
     {
         "id": 13,
+        "title": "vuejs router",
+        "slug": "vuejs-router",
+        "image": "/img/index/vue.png",
+        "alt": "vuejs router",
+        "component": "web-development/Vue2Router",
+        "categories": ["web-development"],
+        "tags": ["web-development","vue","vuejs","router", "vue-router"]
+    },
+    {
+        "id": 14,
         "title": "vuejs 3",
         "slug": "vuejs3",
         "image": "/img/index/vue.png",
@@ -145,7 +155,7 @@
         "tags": ["web-development","vue","vuejs","vue3"]
     },
     {
-        "id": 14,
+        "id": 15,
         "title": "nuxt 기초 개념",
         "slug": "nuxt",
         "image": "/img/index/nuxt.png",
@@ -154,7 +164,7 @@
         "tags": ["web-development","nuxt","vue","vuejs"]
     },
     {
-        "id": 15,
+        "id": 16,
         "title": "Android 기초 개념",
         "slug": "android",
         "image": "/img/index/android.png",
@@ -164,57 +174,12 @@
     },
     {
         "id": 16,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
-    },
-    {
-        "id": 17,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
-    },
-    {
-        "id": 18,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
-    },
-    {
-        "id": 19,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
-    },
-    {
-        "id": 20,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
-    },
-    {
-        "id": 21,
-        "title": "vuejs 기초 개념",
-        "slug": "vuejs",
-        "image": "/img/index/web.png",
-        "alt": "polyfills",
-        "categories": ["web-development"],
-        "tags": ["web-development"]
+        "title": "Android 영상처리 기초",
+        "slug": "android",
+        "image": "/img/index/android.png",
+        "alt": "android 영상처리 기초, exoplayer",
+        "categories": ["android"],
+        "tags": ["android","exoplayer","영상처리"]
     }
 ]
 }
